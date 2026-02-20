@@ -1,0 +1,5615 @@
+[
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "學徒木杖",
+    "id": "A1",
+    "level_required": 1,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 20
+      },
+      {
+        "name": "碎石",
+        "amount": 20
+      },
+      {
+        "name": "鐵",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "琉木法杖",
+    "id": "A2",
+    "level_required": 7,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 30
+      },
+      {
+        "name": "碎石",
+        "amount": 20
+      },
+      {
+        "name": "鐵",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "冒險者之杖",
+    "id": "A3",
+    "level_required": 16,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 60
+      },
+      {
+        "name": "松木",
+        "amount": 15
+      },
+      {
+        "name": "鐵",
+        "amount": 30
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "古藤法杖",
+    "id": "A4",
+    "level_required": 23,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 40
+      },
+      {
+        "name": "銀",
+        "amount": 20
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "犄骨法杖",
+    "id": "A5",
+    "level_required": 30,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 120
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 20
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "密林之杖",
+    "id": "A6",
+    "level_required": 38,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 60
+      },
+      {
+        "name": "古樹之花",
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "機鎖法杖",
+    "id": "A7",
+    "level_required": 44,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 200
+      },
+      {
+        "name": "鐵",
+        "amount": 80
+      },
+      {
+        "name": "銀",
+        "amount": 60
+      },
+      {
+        "name": "金",
+        "amount": 30
+      },
+      {
+        "name": "機器核心",
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "鎏光法杖",
+    "id": "A8",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "紅木",
+        "amount": 50
+      },
+      {
+        "name": "桃木",
+        "amount": 20
+      },
+      {
+        "name": "銀",
+        "amount": 30
+      },
+      {
+        "name": "紅寶石",
+        "amount": 5
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "硰塵之杖",
+    "id": "A9",
+    "level_required": 60,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "蟹螯",
+        "amount": 20
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 40
+      },
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 100
+      },
+      {
+        "name": "杉木",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "禁咒之杖",
+    "id": "A10",
+    "level_required": 70,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 20
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 40
+      },
+      {
+        "name": "紅寶石",
+        "amount": 10
+      },
+      {
+        "name": "松木",
+        "amount": 100
+      },
+      {
+        "name": "杉木",
+        "amount": 100
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "水晶權杖",
+    "id": "A11",
+    "level_required": 85,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 50
+      },
+      {
+        "name": "金",
+        "amount": 120
+      },
+      {
+        "name": "紅寶石",
+        "amount": 25
+      },
+      {
+        "name": "紫水晶",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "主武器",
+    "name": "花境之杖",
+    "id": "A12",
+    "level_required": 85,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 50
+      },
+      {
+        "name": "紅木",
+        "amount": 160
+      },
+      {
+        "name": "桃木",
+        "amount": 35
+      },
+      {
+        "name": "紫檀木",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "學徒魔法書",
+    "id": "B1",
+    "level_required": 1,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 20
+      },
+      {
+        "name": "碎石",
+        "amount": 5
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "琉木法球",
+    "id": "B2",
+    "level_required": 7,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 40
+      },
+      {
+        "name": "松木",
+        "amount": 10
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "冒險者寶典",
+    "id": "B3",
+    "level_required": 16,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 60
+      },
+      {
+        "name": "松木",
+        "amount": 30
+      },
+      {
+        "name": "銀",
+        "amount": 20
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "古藤密籍",
+    "id": "B4",
+    "level_required": 23,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 60
+      },
+      {
+        "name": "杉木",
+        "amount": 20
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 60
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "犄骨密書",
+    "id": "B5",
+    "level_required": 30,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 30
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 80
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 10
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "密林法書",
+    "id": "B6",
+    "level_required": 38,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "紅木",
+        "amount": 20
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 20
+      },
+      {
+        "name": "古樹之花",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "機鎖人偶",
+    "id": "B7",
+    "level_required": 44,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 120
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 50
+      },
+      {
+        "name": "機器核心",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "鎏光法球",
+    "id": "B8",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "野狼牙齒",
+        "amount": 50
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 20
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 20
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "硰塵法典",
+    "id": "B9",
+    "level_required": 60,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "蟹螯",
+        "amount": 15
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 20
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 30
+      },
+      {
+        "name": "松木",
+        "amount": 80
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "禁咒密典",
+    "id": "B10",
+    "level_required": 70,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 20
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 30
+      },
+      {
+        "name": "桃木",
+        "amount": 25
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "水晶法典",
+    "id": "B11",
+    "level_required": 85,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 50
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "紅寶石",
+        "amount": 20
+      },
+      {
+        "name": "紫檀木",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "副武器",
+    "name": "花境密典",
+    "id": "B12",
+    "level_required": 85,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 50
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "桃木",
+        "amount": 40
+      },
+      {
+        "name": "紫水晶",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "皮製頭盔",
+    "id": "C1",
+    "level_required": 1,
+    "stats": {
+      "血量_min": 2,
+      "血量_max": 7,
+      "防禦力_min": 5,
+      "防禦力_max": 13
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "旅行者頭盔",
+    "id": "C2",
+    "level_required": 7,
+    "stats": {
+      "血量_min": 5,
+      "血量_max": 12,
+      "防禦力_min": 9,
+      "防禦力_max": 17
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 15
+      },
+      {
+        "name": "鐵",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "騎士頭盔",
+    "id": "C3",
+    "level_required": 16,
+    "stats": {
+      "血量_min": 8,
+      "血量_max": 17,
+      "防禦力_min": 12,
+      "防禦力_max": 21
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 40
+      },
+      {
+        "name": "鐵",
+        "amount": 20
+      },
+      {
+        "name": "銀",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "卡蘭頭盔",
+    "id": "C4",
+    "level_required": 23,
+    "stats": {
+      "血量_min": 12,
+      "血量_max": 21,
+      "防禦力_min": 16,
+      "防禦力_max": 26
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 50
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 10
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "犄骨頭盔",
+    "id": "C5",
+    "level_required": 30,
+    "stats": {
+      "血量_min": 15,
+      "血量_max": 21,
+      "防禦力_min": 20,
+      "防禦力_max": 31
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 30
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 8
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "密林頭盔",
+    "id": "C6",
+    "level_required": 38,
+    "stats": {
+      "血量_min": 18,
+      "血量_max": 33,
+      "防禦力_min": 26,
+      "防禦力_max": 39
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 60
+      },
+      {
+        "name": "松木",
+        "amount": 40
+      },
+      {
+        "name": "杉木",
+        "amount": 20
+      },
+      {
+        "name": "古樹之花",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "械鎖頭盔",
+    "id": "C7",
+    "level_required": 44,
+    "stats": {
+      "血量_min": 23,
+      "血量_max": 39,
+      "防禦力_min": 31,
+      "防禦力_max": 44
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 60
+      },
+      {
+        "name": "鐵",
+        "amount": 30
+      },
+      {
+        "name": "銀",
+        "amount": 20
+      },
+      {
+        "name": "金",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "鎏光頭盔",
+    "id": "C8",
+    "level_required": 50,
+    "stats": {
+      "血量_min": 30,
+      "血量_max": 50,
+      "防禦力_min": 40,
+      "防禦力_max": 50
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 80
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 40
+      },
+      {
+        "name": "銀",
+        "amount": 40
+      },
+      {
+        "name": "古樹之花",
+        "amount": 7
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "硰塵頭盔",
+    "id": "C9",
+    "level_required": 60,
+    "stats": {
+      "血量_min": 42,
+      "血量_max": 54,
+      "防禦力_min": 48,
+      "防禦力_max": 60
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 50
+      },
+      {
+        "name": "銀",
+        "amount": 60
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 10
+      },
+      {
+        "name": "蟹螯",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "禁咒頭盔",
+    "id": "C10",
+    "level_required": 70,
+    "stats": {
+      "血量_min": 45,
+      "血量_max": 60,
+      "防禦力_min": 53,
+      "防禦力_max": 70
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 80
+      },
+      {
+        "name": "銀",
+        "amount": 60
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 12
+      },
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "水晶頭盔",
+    "id": "C11",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 55,
+      "血量_max": 70,
+      "防禦力_min": 65,
+      "防禦力_max": 85
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 10
+      },
+      {
+        "name": "金",
+        "amount": 50
+      },
+      {
+        "name": "紅寶石",
+        "amount": 8
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "花境頭盔",
+    "id": "C12",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 81,
+      "血量_max": 104,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 10
+      },
+      {
+        "name": "古樹之花",
+        "amount": 30
+      },
+      {
+        "name": "紅木",
+        "amount": 80
+      },
+      {
+        "name": "桃木",
+        "amount": 12
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "聖金頭盔",
+    "id": "C13",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 60,
+      "血量_max": 75,
+      "防禦力_min": 70,
+      "防禦力_max": 95
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "聖靈之珠",
+        "amount": 25
+      },
+      {
+        "name": "蟹螯",
+        "amount": 40
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "紅寶石",
+        "amount": 20
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "頭盔",
+    "name": "天魁頭盔",
+    "id": "C14",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 90,
+      "血量_max": 115,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "死亡氣息",
+        "amount": 25
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 40
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "桃木",
+        "amount": 30
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "皮製上衣",
+    "id": "D1",
+    "level_required": 1,
+    "stats": {
+      "血量_min": 5,
+      "血量_max": 11,
+      "防禦力_min": 11,
+      "防禦力_max": 19
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "旅行者上衣",
+    "id": "D2",
+    "level_required": 7,
+    "stats": {
+      "血量_min": 7,
+      "血量_max": 14,
+      "防禦力_min": 15,
+      "防禦力_max": 24
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 30
+      },
+      {
+        "name": "鐵",
+        "amount": 10
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "騎士上衣",
+    "id": "D3",
+    "level_required": 16,
+    "stats": {
+      "血量_min": 10,
+      "血量_max": 21,
+      "防禦力_min": 20,
+      "防禦力_max": 33
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 50
+      },
+      {
+        "name": "鐵",
+        "amount": 20
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "卡蘭上衣",
+    "id": "D4",
+    "level_required": 23,
+    "stats": {
+      "血量_min": 17,
+      "血量_max": 32,
+      "防禦力_min": 25,
+      "防禦力_max": 38
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 30
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "犄骨上衣",
+    "id": "D5",
+    "level_required": 30,
+    "stats": {
+      "血量_min": 23,
+      "血量_max": 39,
+      "防禦力_min": 32,
+      "防禦力_max": 46
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 80
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 16
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "密林上衣",
+    "id": "D6",
+    "level_required": 38,
+    "stats": {
+      "血量_min": 32,
+      "血量_max": 48,
+      "防禦力_min": 38,
+      "防禦力_max": 52
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 100
+      },
+      {
+        "name": "松木",
+        "amount": 60
+      },
+      {
+        "name": "杉木",
+        "amount": 30
+      },
+      {
+        "name": "古樹之花",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "械鎖上衣",
+    "id": "D7",
+    "level_required": 44,
+    "stats": {
+      "血量_min": 41,
+      "血量_max": 55,
+      "防禦力_min": 44,
+      "防禦力_max": 59
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 100
+      },
+      {
+        "name": "鐵",
+        "amount": 60
+      },
+      {
+        "name": "銀",
+        "amount": 40
+      },
+      {
+        "name": "金",
+        "amount": 20
+      },
+      {
+        "name": "機器核心",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "鎏光上衣",
+    "id": "D8",
+    "level_required": 50,
+    "stats": {
+      "血量_min": 50,
+      "血量_max": 65,
+      "防禦力_min": 50,
+      "防禦力_max": 70
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 160
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 80
+      },
+      {
+        "name": "金",
+        "amount": 50
+      },
+      {
+        "name": "古樹之花",
+        "amount": 20
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "硰塵上衣",
+    "id": "D9",
+    "level_required": 60,
+    "stats": {
+      "血量_min": 56,
+      "血量_max": 77,
+      "防禦力_min": 63,
+      "防禦力_max": 80
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "紅寶石",
+        "amount": 15
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 25
+      },
+      {
+        "name": "蟹螯",
+        "amount": 12
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "禁咒上衣",
+    "id": "D10",
+    "level_required": 70,
+    "stats": {
+      "血量_min": 60,
+      "血量_max": 83,
+      "防禦力_min": 68,
+      "防禦力_max": 85
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 250
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "紅寶石",
+        "amount": 20
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 25
+      },
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 12
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "水晶上衣",
+    "id": "D11",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 77,
+      "血量_max": 95,
+      "防禦力_min": 80,
+      "防禦力_max": 100
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 30
+      },
+      {
+        "name": "銀",
+        "amount": 100
+      },
+      {
+        "name": "金",
+        "amount": 60
+      },
+      {
+        "name": "紅寶石",
+        "amount": 18
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "花境上衣",
+    "id": "D12",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 110,
+      "血量_max": 135,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 30
+      },
+      {
+        "name": "古樹之花",
+        "amount": 50
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "紅木",
+        "amount": 120
+      },
+      {
+        "name": "桃木",
+        "amount": 30
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "聖金上衣",
+    "id": "D13",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 83,
+      "血量_max": 100,
+      "防禦力_min": 90,
+      "防禦力_max": 110
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 500
+      },
+      {
+        "name": "聖靈之珠",
+        "amount": 45
+      },
+      {
+        "name": "蟹螯",
+        "amount": 60
+      },
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 200
+      },
+      {
+        "name": "紅寶石",
+        "amount": 50
+      },
+      {
+        "name": "紫水晶",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "上衣",
+    "name": "天魁上衣",
+    "id": "D14",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 120,
+      "血量_max": 150,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 350
+      },
+      {
+        "name": "死亡氣息",
+        "amount": 45
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 60
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 200
+      },
+      {
+        "name": "桃木",
+        "amount": 50
+      },
+      {
+        "name": "紫檀木",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "皮製下裝",
+    "id": "E1",
+    "level_required": 1,
+    "stats": {
+      "血量_min": 3,
+      "血量_max": 8,
+      "防禦力_min": 9,
+      "防禦力_max": 16
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 16
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "旅行者下裝",
+    "id": "E2",
+    "level_required": 7,
+    "stats": {
+      "血量_min": 5,
+      "血量_max": 11,
+      "防禦力_min": 11,
+      "防禦力_max": 19
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 20
+      },
+      {
+        "name": "鐵",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "騎士下裝",
+    "id": "E3",
+    "level_required": 16,
+    "stats": {
+      "血量_min": 7,
+      "血量_max": 15,
+      "防禦力_min": 14,
+      "防禦力_max": 24
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 40
+      },
+      {
+        "name": "鐵",
+        "amount": 16
+      },
+      {
+        "name": "銀",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "卡蘭下裝",
+    "id": "E4",
+    "level_required": 23,
+    "stats": {
+      "血量_min": 11,
+      "血量_max": 21,
+      "防禦力_min": 17,
+      "防禦力_max": 29
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 40
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 12
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "犄骨下裝",
+    "id": "E5",
+    "level_required": 30,
+    "stats": {
+      "血量_min": 17,
+      "血量_max": 30,
+      "防禦力_min": 22,
+      "防禦力_max": 35
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 40
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 12
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "密林下裝",
+    "id": "E6",
+    "level_required": 38,
+    "stats": {
+      "血量_min": 23,
+      "血量_max": 36,
+      "防禦力_min": 29,
+      "防禦力_max": 41
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 70
+      },
+      {
+        "name": "松木",
+        "amount": 50
+      },
+      {
+        "name": "杉木",
+        "amount": 25
+      },
+      {
+        "name": "古樹之花",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "械鎖下裝",
+    "id": "E7",
+    "level_required": 44,
+    "stats": {
+      "血量_min": 28,
+      "血量_max": 44,
+      "防禦力_min": 35,
+      "防禦力_max": 47
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 70
+      },
+      {
+        "name": "鐵",
+        "amount": 50
+      },
+      {
+        "name": "銀",
+        "amount": 30
+      },
+      {
+        "name": "金",
+        "amount": 20
+      },
+      {
+        "name": "機器核心",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "鎏光下裝",
+    "id": "E8",
+    "level_required": 50,
+    "stats": {
+      "血量_min": 35,
+      "血量_max": 55,
+      "防禦力_min": 55,
+      "防禦力_max": 65
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 120
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 60
+      },
+      {
+        "name": "鐵",
+        "amount": 50
+      },
+      {
+        "name": "古樹之花",
+        "amount": 12
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "硰塵下裝",
+    "id": "E9",
+    "level_required": 60,
+    "stats": {
+      "血量_min": 43,
+      "血量_max": 64,
+      "防禦力_min": 62,
+      "防禦力_max": 77
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 80
+      },
+      {
+        "name": "金",
+        "amount": 50
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 18
+      },
+      {
+        "name": "蟹螯",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "禁咒下裝",
+    "id": "E10",
+    "level_required": 70,
+    "stats": {
+      "血量_min": 48,
+      "血量_max": 69,
+      "防禦力_min": 67,
+      "防禦力_max": 80
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "金",
+        "amount": 50
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 18
+      },
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "水晶下裝",
+    "id": "E11",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 65,
+      "血量_max": 80,
+      "防禦力_min": 77,
+      "防禦力_max": 90
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 20
+      },
+      {
+        "name": "銀",
+        "amount": 80
+      },
+      {
+        "name": "金",
+        "amount": 50
+      },
+      {
+        "name": "紅寶石",
+        "amount": 12
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "花境下裝",
+    "id": "E12",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 95,
+      "血量_max": 116,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 20
+      },
+      {
+        "name": "古樹之花",
+        "amount": 40
+      },
+      {
+        "name": "杉木",
+        "amount": 100
+      },
+      {
+        "name": "紅木",
+        "amount": 80
+      },
+      {
+        "name": "桃木",
+        "amount": 20
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "聖金下裝",
+    "id": "E13",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 70,
+      "血量_max": 85,
+      "防禦力_min": 82,
+      "防禦力_max": 98
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 400
+      },
+      {
+        "name": "聖靈之珠",
+        "amount": 30
+      },
+      {
+        "name": "蟹螯",
+        "amount": 40
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "紅寶石",
+        "amount": 30
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "下裝",
+    "name": "天魁下裝",
+    "id": "E14",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 100,
+      "血量_max": 125,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 200
+      },
+      {
+        "name": "死亡氣息",
+        "amount": 30
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 40
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "桃木",
+        "amount": 30
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "皮製鞋子",
+    "id": "F1",
+    "level_required": 1,
+    "stats": {
+      "血量_min": 1,
+      "血量_max": 5,
+      "防禦力_min": 4,
+      "防禦力_max": 10
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "旅行者鞋子",
+    "id": "F2",
+    "level_required": 7,
+    "stats": {
+      "血量_min": 3,
+      "血量_max": 9,
+      "防禦力_min": 7,
+      "防禦力_max": 13
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 15
+      },
+      {
+        "name": "鐵",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "騎士鞋子",
+    "id": "F3",
+    "level_required": 16,
+    "stats": {
+      "血量_min": 5,
+      "血量_max": 12,
+      "防禦力_min": 10,
+      "防禦力_max": 18
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 40
+      },
+      {
+        "name": "鐵",
+        "amount": 7
+      },
+      {
+        "name": "銀",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "卡蘭鞋子",
+    "id": "F4",
+    "level_required": 23,
+    "stats": {
+      "血量_min": 8,
+      "血量_max": 17,
+      "防禦力_min": 12,
+      "防禦力_max": 21
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 20
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 5
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "犄骨鞋子",
+    "id": "F5",
+    "level_required": 30,
+    "stats": {
+      "血量_min": 12,
+      "血量_max": 21,
+      "防禦力_min": 16,
+      "防禦力_max": 26
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 30
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 8
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "密林鞋子",
+    "id": "F6",
+    "level_required": 38,
+    "stats": {
+      "血量_min": 15,
+      "血量_max": 27,
+      "防禦力_min": 20,
+      "防禦力_max": 31
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 60
+      },
+      {
+        "name": "松木",
+        "amount": 30
+      },
+      {
+        "name": "杉木",
+        "amount": 20
+      },
+      {
+        "name": "古樹之花",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "械鎖鞋子",
+    "id": "F7",
+    "level_required": 44,
+    "stats": {
+      "血量_min": 18,
+      "血量_max": 33,
+      "防禦力_min": 26,
+      "防禦力_max": 39
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 60
+      },
+      {
+        "name": "鐵",
+        "amount": 50
+      },
+      {
+        "name": "銀",
+        "amount": 20
+      },
+      {
+        "name": "金",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "鎏光鞋子",
+    "id": "F8",
+    "level_required": 50,
+    "stats": {
+      "血量_min": 25,
+      "血量_max": 45,
+      "防禦力_min": 30,
+      "防禦力_max": 45
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 80
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 40
+      },
+      {
+        "name": "碎石",
+        "amount": 80
+      },
+      {
+        "name": "古樹之花",
+        "amount": 7
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "硰塵鞋子",
+    "id": "F9",
+    "level_required": 60,
+    "stats": {
+      "血量_min": 32,
+      "血量_max": 57,
+      "防禦力_min": 40,
+      "防禦力_max": 55
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 60
+      },
+      {
+        "name": "鐵",
+        "amount": 70
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "禁咒鞋子",
+    "id": "F10",
+    "level_required": 70,
+    "stats": {
+      "血量_min": 38,
+      "血量_max": 63,
+      "防禦力_min": 45,
+      "防禦力_max": 60
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 100
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 80
+      },
+      {
+        "name": "鐵",
+        "amount": 70
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 12
+      },
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 8
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "水晶鞋子",
+    "id": "F11",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 50,
+      "血量_max": 65,
+      "防禦力_min": 55,
+      "防禦力_max": 75
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 15
+      },
+      {
+        "name": "金",
+        "amount": 50
+      },
+      {
+        "name": "紅寶石",
+        "amount": 8
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "花境鞋子",
+    "id": "F12",
+    "level_required": 85,
+    "stats": {
+      "血量_min": 72,
+      "血量_max": 95,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "空藥水瓶",
+        "amount": 15
+      },
+      {
+        "name": "古樹之花",
+        "amount": 16
+      },
+      {
+        "name": "紅木",
+        "amount": 70
+      },
+      {
+        "name": "桃木",
+        "amount": 18
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "聖金鞋子",
+    "id": "F13",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 55,
+      "血量_max": 70,
+      "防禦力_min": 60,
+      "防禦力_max": 82
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "聖靈之珠",
+        "amount": 20
+      },
+      {
+        "name": "蟹螯",
+        "amount": 30
+      },
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "紅寶石",
+        "amount": 20
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "basic.txt",
+    "category": "鞋子",
+    "name": "天魁鞋子",
+    "id": "F14",
+    "level_required": 95,
+    "stats": {
+      "血量_min": 80,
+      "血量_max": 105,
+      "防禦力_min": 0,
+      "防禦力_max": 0
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "死亡氣息",
+        "amount": 20
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 30
+      },
+      {
+        "name": "原木",
+        "amount": 400
+      },
+      {
+        "name": "桃木",
+        "amount": 20
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "生命之觸",
+    "id": "H1",
+    "level_required": 40,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 250
+      },
+      {
+        "name": "松木",
+        "amount": 130
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 12
+      },
+      {
+        "name": "破碎的哥布林面具",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "死亡之觸",
+    "id": "H2",
+    "level_required": 60,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 20
+      },
+      {
+        "name": "完整的哥布林面具",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "密林守護",
+    "id": "H3",
+    "level_required": 85,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "紅木",
+        "amount": 80
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 35
+      },
+      {
+        "name": "哥布林的信物",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "獸牙手鍊",
+    "id": "H4",
+    "level_required": 40,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 250
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 70
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 12
+      },
+      {
+        "name": "獸人盾牌碎片",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "獸骨手鍊",
+    "id": "H5",
+    "level_required": 60,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 20
+      },
+      {
+        "name": "獸人盾牌",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "獸神幻影",
+    "id": "H6",
+    "level_required": 85,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "紅寶石",
+        "amount": 20
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 35
+      },
+      {
+        "name": "獸人的頭帶",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "嗜血手鍊",
+    "id": "H7",
+    "level_required": 40,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 250
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 70
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 12
+      },
+      {
+        "name": "狼王毛髮",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "狂暴之鍊",
+    "id": "H8",
+    "level_required": 60,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 20
+      },
+      {
+        "name": "狼王牙齒",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "血怒鬼眼",
+    "id": "H9",
+    "level_required": 85,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 100
+      },
+      {
+        "name": "桃木",
+        "amount": 20
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 35
+      },
+      {
+        "name": "狼王的信念",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "機械之觸",
+    "id": "H10",
+    "level_required": 40,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "機器核心",
+        "amount": 12
+      },
+      {
+        "name": "機械零件",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "電能控制",
+    "id": "H11",
+    "level_required": 60,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 500
+      },
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 20
+      },
+      {
+        "name": "電子芯片",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "微型磁場",
+    "id": "H12",
+    "level_required": 85,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 400
+      },
+      {
+        "name": "金",
+        "amount": 200
+      },
+      {
+        "name": "紅寶石",
+        "amount": 50
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "機器核心",
+        "amount": 35
+      },
+      {
+        "name": "奈米合金",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "迷香手鐲",
+    "id": "H13",
+    "level_required": 40,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 400
+      },
+      {
+        "name": "松木",
+        "amount": 130
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 12
+      },
+      {
+        "name": "妖狐之尾",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "鍊魂手鐲",
+    "id": "H14",
+    "level_required": 60,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 20
+      },
+      {
+        "name": "靈魂狐爪",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "攝魂心魄",
+    "id": "H15",
+    "level_required": 85,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "杉木",
+        "amount": 400
+      },
+      {
+        "name": "紅木",
+        "amount": 200
+      },
+      {
+        "name": "桃木",
+        "amount": 50
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 35
+      },
+      {
+        "name": "幻視妖狐面具",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "磷毒手鍊",
+    "id": "H16",
+    "level_required": 40,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 250
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 12
+      },
+      {
+        "name": "劇毒根鬚",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "磷化手環",
+    "id": "H17",
+    "level_required": 60,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 300
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 20
+      },
+      {
+        "name": "猛毒內核",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "艷妖磷環",
+    "id": "H18",
+    "level_required": 85,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 100
+      },
+      {
+        "name": "桃木",
+        "amount": 20
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 500
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 35
+      },
+      {
+        "name": "毒母之心",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "晶體手環",
+    "id": "H19",
+    "level_required": 40,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 70
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 12
+      },
+      {
+        "name": "藍色藥水",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "魔能手鍊",
+    "id": "H20",
+    "level_required": 60,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 20
+      },
+      {
+        "name": "生物混合塊",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "秘術權能",
+    "id": "H21",
+    "level_required": 85,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 400
+      },
+      {
+        "name": "金",
+        "amount": 200
+      },
+      {
+        "name": "紅寶石",
+        "amount": 50
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 35
+      },
+      {
+        "name": "混沌水晶體",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "蝦殼手環",
+    "id": "H22",
+    "level_required": 40,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 250
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 70
+      },
+      {
+        "name": "蟹螯",
+        "amount": 12
+      },
+      {
+        "name": "龍蝦觸鬚",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "螯龍鐲鍊",
+    "id": "H23",
+    "level_required": 60,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "金",
+        "amount": 80
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "蟹螯",
+        "amount": 20
+      },
+      {
+        "name": "龍蝦厚殼",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "生命之觸",
+    "name": "巨螯之影",
+    "id": "H24",
+    "level_required": 85,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "桃木",
+        "amount": 50
+      },
+      {
+        "name": "紅寶石",
+        "amount": 50
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "蟹螯",
+        "amount": 35
+      },
+      {
+        "name": "龍蝦巨螯",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "cloak.txt",
+    "category": "斗篷",
+    "name": "深幽斗篷",
+    "id": "L1",
+    "level_required": 85,
+    "stats": {
+      "耀光靈源_min": 20,
+      "耀光靈源_max": 410
+    },
+    "buff": "",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "祝福原鑽",
+        "amount": 1
+      },
+      {
+        "name": "蝙蝠皮膜",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "幽窟碎片",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "野蠻之爪",
+    "id": "G1",
+    "level_required": 40,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 250
+      },
+      {
+        "name": "鐵",
+        "amount": 130
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 12
+      },
+      {
+        "name": "破碎的哥布林面具",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "嗜血之爪",
+    "id": "G2",
+    "level_required": 60,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 25
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 20
+      },
+      {
+        "name": "完整的哥布林面具",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "貪婪之爪",
+    "id": "G3",
+    "level_required": 85,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 100
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 35
+      },
+      {
+        "name": "哥布林的信物",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "獸靈結晶",
+    "id": "G4",
+    "level_required": 40,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 250
+      },
+      {
+        "name": "松木",
+        "amount": 130
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 70
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 12
+      },
+      {
+        "name": "獸人盾牌碎片",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "獸靈凝華",
+    "id": "G5",
+    "level_required": 60,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "松木",
+        "amount": 150
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 20
+      },
+      {
+        "name": "獸人盾牌",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "獸靈祝福",
+    "id": "G6",
+    "level_required": 85,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "紅木",
+        "amount": 80
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 35
+      },
+      {
+        "name": "獸人的頭帶",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "鋒銳之牙",
+    "id": "G7",
+    "level_required": 40,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 250
+      },
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 70
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 12
+      },
+      {
+        "name": "狼王毛髮",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "狼王白鬃",
+    "id": "G8",
+    "level_required": 60,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 20
+      },
+      {
+        "name": "狼王牙齒",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "貪狼爪",
+    "id": "G9",
+    "level_required": 85,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "桃木",
+        "amount": 40
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 35
+      },
+      {
+        "name": "狼王的信念",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "機巧晶片",
+    "id": "G10",
+    "level_required": 40,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 300
+      },
+      {
+        "name": "機器核心",
+        "amount": 12
+      },
+      {
+        "name": "機械零件",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "高階芯片",
+    "id": "G11",
+    "level_required": 60,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 500
+      },
+      {
+        "name": "松木",
+        "amount": 350
+      },
+      {
+        "name": "杉木",
+        "amount": 250
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 20
+      },
+      {
+        "name": "電子芯片",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "機械之眼",
+    "id": "G12",
+    "level_required": 85,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 800
+      },
+      {
+        "name": "銀",
+        "amount": 500
+      },
+      {
+        "name": "金",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "機器核心",
+        "amount": 35
+      },
+      {
+        "name": "奈米合金",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "安神項鍊",
+    "id": "G13",
+    "level_required": 40,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 400
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 300
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 12
+      },
+      {
+        "name": "妖狐之尾",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "靈狐纏繞",
+    "id": "G14",
+    "level_required": 60,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "杉木",
+        "amount": 350
+      },
+      {
+        "name": "鐵",
+        "amount": 250
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 20
+      },
+      {
+        "name": "靈魂狐爪",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "靈狐咒力",
+    "id": "G15",
+    "level_required": 85,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 800
+      },
+      {
+        "name": "杉木",
+        "amount": 500
+      },
+      {
+        "name": "紅木",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 35
+      },
+      {
+        "name": "幻視妖狐面具",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "荊棘之環",
+    "id": "G16",
+    "level_required": 40,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 300
+      },
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 12
+      },
+      {
+        "name": "劇毒根鬚",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "血毒項鍊",
+    "id": "G17",
+    "level_required": 60,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 400
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 300
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 20
+      },
+      {
+        "name": "猛毒內核",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "血妖凝視",
+    "id": "G18",
+    "level_required": 85,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 400
+      },
+      {
+        "name": "金",
+        "amount": 120
+      },
+      {
+        "name": "桃木",
+        "amount": 50
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 500
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 35
+      },
+      {
+        "name": "毒母之心",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "粗製掛墜",
+    "id": "G19",
+    "level_required": 40,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 70
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 12
+      },
+      {
+        "name": "藍色藥水",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "精煉掛墜",
+    "id": "G20",
+    "level_required": 60,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "松木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 20
+      },
+      {
+        "name": "生物混合塊",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "動能核心",
+    "id": "G21",
+    "level_required": 85,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 600
+      },
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 35
+      },
+      {
+        "name": "混沌水晶體",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "硬殼鍊墜",
+    "id": "G22",
+    "level_required": 40,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "原木",
+        "amount": 400
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 70
+      },
+      {
+        "name": "蟹螯",
+        "amount": 12
+      },
+      {
+        "name": "龍蝦觸鬚",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "蝦殼之鍊",
+    "id": "G23",
+    "level_required": 60,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "蟹螯",
+        "amount": 20
+      },
+      {
+        "name": "龍蝦厚殼",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "necklace.txt",
+    "category": "野蠻之爪",
+    "name": "海妖之心",
+    "id": "G24",
+    "level_required": 85,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "桃木",
+        "amount": 40
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "蟹螯",
+        "amount": 35
+      },
+      {
+        "name": "龍蝦巨螯",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "自然之握",
+    "id": "I1",
+    "level_required": 40,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 180
+      },
+      {
+        "name": "杉木",
+        "amount": 100
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 12
+      },
+      {
+        "name": "破碎的哥布林面具",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "萬物寶戒",
+    "id": "I2",
+    "level_required": 60,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 20
+      },
+      {
+        "name": "完整的哥布林面具",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "萬化淨彩",
+    "id": "I3",
+    "level_required": 85,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 35
+      },
+      {
+        "name": "哥布林的信物",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "骨戒",
+    "id": "I4",
+    "level_required": 40,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 180
+      },
+      {
+        "name": "銀",
+        "amount": 100
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 12
+      },
+      {
+        "name": "獸人盾牌碎片",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "骨獸魂戒",
+    "id": "I5",
+    "level_required": 60,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 20
+      },
+      {
+        "name": "獸人盾牌",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "獸王回憶",
+    "id": "I6",
+    "level_required": 85,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "紅寶石",
+        "amount": 30
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 35
+      },
+      {
+        "name": "獸人的頭帶",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "暗影之戒",
+    "id": "I7",
+    "level_required": 40,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 300
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 12
+      },
+      {
+        "name": "狼王毛髮",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "暗夜之戒",
+    "id": "I8",
+    "level_required": 60,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 20
+      },
+      {
+        "name": "狼王牙齒",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "夜神永恆",
+    "id": "I9",
+    "level_required": 85,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "桃木",
+        "amount": 30
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 35
+      },
+      {
+        "name": "狼王的信念",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "電磁屏蔽",
+    "id": "I10",
+    "level_required": 40,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 800
+      },
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "機器核心",
+        "amount": 12
+      },
+      {
+        "name": "機械零件",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "無限迴路",
+    "id": "I11",
+    "level_required": 60,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 500
+      },
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 20
+      },
+      {
+        "name": "電子芯片",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "永世夢境",
+    "id": "I12",
+    "level_required": 85,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 400
+      },
+      {
+        "name": "金",
+        "amount": 300
+      },
+      {
+        "name": "紅寶石",
+        "amount": 70
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "機器核心",
+        "amount": 35
+      },
+      {
+        "name": "奈米合金",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "靈巧之戒",
+    "id": "I13",
+    "level_required": 40,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 800
+      },
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 12
+      },
+      {
+        "name": "妖狐之尾",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "妖魅幻音",
+    "id": "I14",
+    "level_required": 60,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 20
+      },
+      {
+        "name": "靈魂狐爪",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "狡黠幻影",
+    "id": "I15",
+    "level_required": 85,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "杉木",
+        "amount": 400
+      },
+      {
+        "name": "紅木",
+        "amount": 300
+      },
+      {
+        "name": "桃木",
+        "amount": 70
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 35
+      },
+      {
+        "name": "幻視妖狐面具",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "花妖戒指",
+    "id": "I16",
+    "level_required": 40,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 300
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 12
+      },
+      {
+        "name": "劇毒根鬚",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "血蓮之戒",
+    "id": "I17",
+    "level_required": 60,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 300
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 20
+      },
+      {
+        "name": "猛毒內核",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "毒花血靈",
+    "id": "I18",
+    "level_required": 85,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "桃木",
+        "amount": 30
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 500
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 35
+      },
+      {
+        "name": "毒母之心",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "靈心戒指",
+    "id": "I19",
+    "level_required": 40,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 300
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 70
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 12
+      },
+      {
+        "name": "藍色藥水",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "靈空指環",
+    "id": "I20",
+    "level_required": 60,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "松木",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 20
+      },
+      {
+        "name": "生物混合塊",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "煉魔靈戒",
+    "id": "I21",
+    "level_required": 85,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "金",
+        "amount": 250
+      },
+      {
+        "name": "桃木",
+        "amount": 50
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 35
+      },
+      {
+        "name": "混沌水晶體",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "蝦尾指環",
+    "id": "I22",
+    "level_required": 40,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 700
+      },
+      {
+        "name": "松木",
+        "amount": 350
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 70
+      },
+      {
+        "name": "蟹螯",
+        "amount": 12
+      },
+      {
+        "name": "龍蝦觸鬚",
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "蝦心之戒",
+    "id": "I23",
+    "level_required": 60,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "紅木",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "蟹螯",
+        "amount": 20
+      },
+      {
+        "name": "龍蝦厚殼",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "ring.txt",
+    "category": "自然之握",
+    "name": "蝦龍神行",
+    "id": "I24",
+    "level_required": 85,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 400
+      },
+      {
+        "name": "金",
+        "amount": 300
+      },
+      {
+        "name": "紅寶石",
+        "amount": 70
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "蟹螯",
+        "amount": 35
+      },
+      {
+        "name": "龍蝦巨螯",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "大地核心",
+    "id": "K1",
+    "level_required": 40,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "原木",
+        "amount": 1000
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "曦光水晶",
+    "id": "K2",
+    "level_required": 40,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 500
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "七色琉璃",
+    "id": "K3",
+    "level_required": 40,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "紅寶石",
+        "amount": 100
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "核心晶片",
+    "id": "K4",
+    "level_required": 40,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "金",
+        "amount": 250
+      },
+      {
+        "name": "機器核心",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "妖狐原核",
+    "id": "K5",
+    "level_required": 40,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "紅木",
+        "amount": 250
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "毒心凝石",
+    "id": "K6",
+    "level_required": 40,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "杉木",
+        "amount": 500
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "原石魔塊",
+    "id": "K7",
+    "level_required": 40,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "rock.txt",
+    "category": "符文石",
+    "name": "螯龍之心",
+    "id": "K8",
+    "level_required": 40,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "桃木",
+        "amount": 100
+      },
+      {
+        "name": "蟹螯",
+        "amount": 40
+      },
+      {
+        "name": "迴廊根源",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "file": "talisman.txt",
+    "category": "祕符",
+    "name": "月影星紗",
+    "id": "M1",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "銀月舞者",
+    "resources": []
+  },
+  {
+    "file": "talisman.txt",
+    "category": "祕符",
+    "name": "魔契誓印",
+    "id": "M2",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "馭魔使者",
+    "resources": []
+  },
+  {
+    "file": "talisman.txt",
+    "category": "祕符",
+    "name": "極寒冰心",
+    "id": "M3",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "冰霜術士",
+    "resources": []
+  },
+  {
+    "file": "talisman.txt",
+    "category": "祕符",
+    "name": "幻夢空界",
+    "id": "M4",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "噬夢幻靈",
+    "resources": []
+  },
+  {
+    "file": "talisman.txt",
+    "category": "祕符",
+    "name": "虛空咒引",
+    "id": "M5",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "深淵行者",
+    "resources": []
+  },
+  {
+    "file": "talisman.txt",
+    "category": "祕符",
+    "name": "幽魂追獵",
+    "id": "M6",
+    "level_required": 50,
+    "stats": {},
+    "buff": "",
+    "job_required": "獵靈使者",
+    "resources": []
+  }
+]

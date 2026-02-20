@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>裝備配置模擬器</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #f9fafb;
+        }
+
+        h1 {
+            color: #1f2937;
+            text-align: center;
+        }
+
+        h2 {
+            color: #374151;
+            margin-top: 32px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        .slot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .slot {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 16px;
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #e5e7eb;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        tr:nth-child(even) {
+            background: #fafbfc;
+        }
+
+        .shortcut-row {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 12px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .shortcut-row select,
+        .shortcut-row button {
+            margin-right: 12px;
+            margin-bottom: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #resetBtn {
+            background: #ef4444;
+            color: white;
+            font-weight: 600;
+        }
+
+        #resetBtn:hover {
+            background: #dc2626;
+        }
+
+        #applyBasicBtn,
+        #applyBuffBtn {
+            background: #10b981;
+            color: white;
+            font-weight: 600;
+        }
+
+        #applyBasicBtn:hover,
+        #applyBuffBtn:hover {
+            background: #059669;
+        }
+
+        pre {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13px;
+            white-space: pre-wrap;
+        }
+
+        .empty-state {
+            color: #9ca3af;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🛡️ 裝備配置模擬器</h1>
+    <p style="text-align: center; color: #6b7280;">
+        載入自 <code>complete_equipment.json</code> | 支援 11 格裝備配置 + 兩種快捷方式
+    </p>
+
+    <h2>1. 選擇裝備</h2>
+    <div class="slot-grid" id="slotContainer">
+        <!-- JS 動態產生 -->
+    </div>
+
+    <h2>2. 快捷操作</h2>
+
+    <div class="shortcut-row">
+        <div>
+            <strong>📦 基本裝備（主/副武器 + 全身防具）</strong><br />
+            等級：<select id="basicLevelSelect">
+                <option value="">-- 選擇等級 --</option>
+            </select>
+            <button id="applyBasicBtn">📦 套用</button>
+        </div>
+    </div>
+
+    <div class="shortcut-row">
+        <div>
+            <strong>🎁 套裝效果（首飾 + 符文石）</strong><br />
+            套裝：<select id="buffSelect">
+                <option value="">-- 選擇套裝效果 --</option>
+            </select>
+            等級：<select id="buffLevelSelect">
+                <option value="">-- 選擇等級 --</option>
+            </select>
+            <button id="applyBuffBtn">🎁 套用</button>
+        </div>
+    </div>
+
+    <div class="shortcut-row">
+        <div>
+            <button id="resetBtn">🔄 重設全部裝備</button>
+        </div>
+    </div>
+
+    <h2>3. 總屬性</h2>
+    <table id="statTable">
+        <thead>
+            <tr>
+                <th>屬性</th>
+                <th>總 Min</th>
+                <th>總 Max</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>4. 所需素材總量</h2>
+    <table id="resTable">
+        <thead>
+            <tr>
+                <th>素材名稱</th>
+                <th>總數量</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>5. 目前已選裝備（除錯用）</h2>
+    <pre id="debugSelected">載入中...</pre>
+
+    <script>
+        // ---- 設定：11 個裝備欄位 ----
+        const SLOT_DEFS = [
+            { slotId: "主武器", label: "主武器", category: "主武器" },
+            { slotId: "副武器", label: "副武器", category: "副武器" },
+            { slotId: "頭盔", label: "頭盔", category: "頭盔" },
+            { slotId: "上衣", label: "上衣", category: "上衣" },
+            { slotId: "下裝", label: "下裝", category: "下裝" },
+            { slotId: "鞋子", label: "鞋子", category: "鞋子" },
+            { slotId: "手鍊", label: "手鍊", category: "手鍊" },
+            { slotId: "斗篷", label: "斗篷", category: "斗篷" },
+            { slotId: "項鍊", label: "項鍊", category: "項鍊" },
+            { slotId: "戒指", label: "戒指", category: "戒指" },
+            { slotId: "符文石", label: "符文石", category: "符文石" }
+        ];
+
+        let allItems = [];
+        let itemsByCategory = {};
+        let selectedBySlot = {};
+
+        // ---- 初始化 ----
+        async function init() {
+            try {
+                const res = await fetch("complete_equipment.json");
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                allItems = await res.json();
+                console.log("✅ 載入", allItems.length, "個裝備");
+            } catch (err) {
+                console.error("❌ JSON 載入失敗:", err);
+                document.body.innerHTML += `<div style="color:red;padding:20px;">載入 complete_equipment.json 失敗: ${err.message}<br>請確認：<ol><li>檔案存在同一資料夾</li><li>用 HTTP server 開（python -m http.server）</li></ol></div>`;
+                return;
+            }
+
+            // 依 category 分組 + 排序
+            itemsByCategory = {};
+            for (const it of allItems) {
+                if (!itemsByCategory[it.category]) itemsByCategory[it.category] = [];
+                itemsByCategory[it.category].push(it);
+            }
+            for (const cat in itemsByCategory) {
+                itemsByCategory[cat].sort((a, b) => a.level_required - b.level_required);
+            }
+
+            buildSlotSelectors();
+            buildShortcuts();
+            recalc();
+        }
+
+        // ---- 產生 11 個裝備欄位 ----
+        function buildSlotSelectors() {
+            const container = document.getElementById("slotContainer");
+            container.innerHTML = "";
+            selectedBySlot = {};
+
+            for (const def of SLOT_DEFS) {
+                const div = document.createElement("div");
+                div.className = "slot";
+
+                const label = document.createElement("label");
+                label.textContent = def.label;
+                label.htmlFor = "select_" + def.slotId;
+
+                const sel = document.createElement("select");
+                sel.id = "select_" + def.slotId;
+                sel.dataset.slotId = def.slotId;
+
+                const emptyOpt = document.createElement("option");
+                emptyOpt.value = "";
+                emptyOpt.textContent = "-- 不裝備 --";
+                sel.appendChild(emptyOpt);
+
+                const catItems = itemsByCategory[def.category] || [];
+                for (const it of catItems) {
+                    const opt = document.createElement("option");
+                    opt.value = it.id;
+                    opt.textContent = `${it.name} (${it.id} / Lv.${it.level_required})`;
+                    sel.appendChild(opt);
+                }
+
+                sel.addEventListener("change", onSlotChange);
+                div.appendChild(label);
+                div.appendChild(sel);
+                container.appendChild(div);
+
+                selectedBySlot[def.slotId] = null;
+            }
+        }
+
+        function onSlotChange(e) {
+            const sel = e.target;
+            const slotId = sel.dataset.slotId;
+            const itemId = sel.value;
+            if (!itemId) {
+                selectedBySlot[slotId] = null;
+            } else {
+                const def = SLOT_DEFS.find(d => d.slotId === slotId);
+                const catItems = itemsByCategory[def.category] || [];
+                selectedBySlot[slotId] = catItems.find(it => it.id === itemId) || null;
+            }
+            recalc();
+        }
+
+        // ---- 快捷功能 ----
+        function buildShortcuts() {
+            // 基本裝備等級
+            const mainCats = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"];
+            const mainLevelsSet = new Set();
+            for (const cat of mainCats) {
+                const items = itemsByCategory[cat] || [];
+                for (const it of items) mainLevelsSet.add(it.level_required);
+            }
+            const mainLevels = Array.from(mainLevelsSet).sort((a, b) => a - b);
+
+            const levelSel = document.getElementById("basicLevelSelect");
+            for (const lv of mainLevels) {
+                const opt = document.createElement("option");
+                opt.value = lv;
+                opt.textContent = `Lv. ${lv}`;
+                levelSel.appendChild(opt);
+            }
+
+            document.getElementById("applyBasicBtn").onclick = () => {
+                const lv = parseInt(levelSel.value);
+                if (!lv) return alert("請選擇等級");
+
+                for (const slot of SLOT_DEFS) {
+                    if (!mainCats.includes(slot.category)) continue;
+                    const catItems = itemsByCategory[slot.category] || [];
+                    const found = catItems.find(it => it.level_required === lv);
+                    const selEl = document.getElementById("select_" + slot.slotId);
+                    if (found) {
+                        selEl.value = found.id;
+                        selectedBySlot[slot.slotId] = found;
+                    }
+                }
+                recalc();
+            };
+
+            // 套裝效果
+            const buffSet = new Set();
+            const buffLvSet = new Set();
+            for (const it of allItems) {
+                if (it.buff?.trim()) {
+                    buffSet.add(it.buff.trim());
+                    buffLvSet.add(it.level_required);
+                }
+            }
+
+            const buffSel = document.getElementById("buffSelect");
+            for (const b of Array.from(buffSet).sort()) {
+                const opt = document.createElement("option");
+                opt.value = b;
+                opt.textContent = b;
+                buffSel.appendChild(opt);
+            }
+
+            const buffLvSel = document.getElementById("buffLevelSelect");
+            for (const lv of Array.from(buffLvSet).sort((a, b) => a - b)) {
+                const opt = document.createElement("option");
+                opt.value = lv;
+                opt.textContent = `Lv. ${lv}`;
+                buffLvSel.appendChild(opt);
+            }
+
+            document.getElementById("applyBuffBtn").onclick = () => {
+                const buff = buffSel.value;
+                const lv = parseInt(buffLvSel.value);
+                if (!buff || !lv) return alert("請選擇套裝效果 + 等級");
+
+                const buffCats = ["手鍊", "項鍊", "戒指", "符文石"];
+                for (const slot of SLOT_DEFS) {
+                    if (!buffCats.includes(slot.category)) continue;
+                    const catItems = itemsByCategory[slot.category] || [];
+                    const found = catItems.find(it => it.buff === buff && it.level_required === lv);
+                    const selEl = document.getElementById("select_" + slot.slotId);
+                    if (found) {
+                        selEl.value = found.id;
+                        selectedBySlot[slot.slotId] = found;
+                    }
+                }
+                recalc();
+            };
+
+            // 🔄 Reset 按鈕
+            document.getElementById("resetBtn").onclick = () => {
+                for (const def of SLOT_DEFS) {
+                    const selEl = document.getElementById("select_" + def.slotId);
+                    if (selEl) selEl.value = "";
+                    selectedBySlot[def.slotId] = null;
+                }
+                document.getElementById("basicLevelSelect").value = "";
+                document.getElementById("buffSelect").value = "";
+                document.getElementById("buffLevelSelect").value = "";
+                recalc();
+            };
+        }
+
+        // ---- 重算（修正版）----
+        function recalc() {
+            const equippedItems = Object.values(selectedBySlot).filter(Boolean);
+
+            // 屬性統計
+            const statAgg = {};
+            for (const it of equippedItems) {
+                const stats = it.stats || {};
+                for (const key in stats) {
+                    const m = key.match(/(.+)_min$/);
+                    const x = key.match(/(.+)_max$/);
+                    if (m) {
+                        const base = m[1];
+                        if (!statAgg[base]) statAgg[base] = { min: 0, max: 0 };
+                        statAgg[base].min += stats[key];
+                    } else if (x) {
+                        const base = x[1];
+                        if (!statAgg[base]) statAgg[base] = { min: 0, max: 0 };
+                        statAgg[base].max += stats[key];
+                    }
+                }
+            }
+
+            // 素材統計
+            const resAgg = {};
+            for (const it of equippedItems) {
+                const resArr = it.resources || [];
+                for (const r of resArr) {
+                    if (!resAgg[r.name]) resAgg[r.name] = 0;
+                    resAgg[r.name] += r.amount;
+                }
+            }
+
+            // 更新屬性表
+            const statBody = document.querySelector("#statTable tbody");
+            statBody.innerHTML = "";
+            if (equippedItems.length === 0 || Object.keys(statAgg).length === 0) {
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.colSpan = 3;
+                td.className = "empty-state";
+                td.textContent = "未選擇任何裝備或無屬性資料";
+                tr.appendChild(td);
+                statBody.appendChild(tr);
+            } else {
+                for (const base of Object.keys(statAgg).sort()) {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+            <td>${base}</td>
+            <td>${statAgg[base].min}</td>
+            <td>${statAgg[base].max}</td>
+          `;
+                    statBody.appendChild(tr);
+                }
+            }
+
+            // 更新素材表
+            const resBody = document.querySelector("#resTable tbody");
+            resBody.innerHTML = "";
+            if (Object.keys(resAgg).length === 0) {
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.colSpan = 2;
+                td.className = "empty-state";
+                td.textContent = "未選擇任何裝備";
+                tr.appendChild(td);
+                resBody.appendChild(tr);
+            } else {
+                for (const name of Object.keys(resAgg).sort()) {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `<td>${name}</td><td>${resAgg[name]}</td>`;
+                    resBody.appendChild(tr);
+                }
+            }
+
+            // 更新除錯區
+            const dbg = document.getElementById("debugSelected");
+            if (equippedItems.length === 0) {
+                dbg.textContent = "無裝備（已重設）";
+                dbg.style.color = "#9ca3af";
+            } else {
+                dbg.textContent = JSON.stringify(equippedItems, null, 2);
+                dbg.style.color = "#e5e7eb";
+            }
+        }
+
+        // ---- 啟動 ----
+        init();
+    </script>
+</body>
+
+</html>
