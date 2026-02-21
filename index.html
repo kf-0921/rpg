@@ -253,10 +253,11 @@
             { slotId: "上衣", label: "上衣", category: "上衣" },
             { slotId: "下裝", label: "下裝", category: "下裝" },
             { slotId: "鞋子", label: "鞋子", category: "鞋子" },
-            { slotId: "手鍊", label: "手鍊", category: "手鍊" },
             { slotId: "斗篷", label: "斗篷", category: "斗篷" },
+            { slotId: "手鍊", label: "手鍊", category: "手鍊" },
             { slotId: "項鍊", label: "項鍊", category: "項鍊" },
             { slotId: "戒指", label: "戒指", category: "戒指" },
+            { slotId: "寶石", label: "寶石", category: "寶石" },
             { slotId: "符文石", label: "符文石", category: "符文石" }
         ];
 
@@ -513,7 +514,7 @@
                 const buff = buffSel.value;
                 const lv = parseInt(buffLvSel.value);
                 if (!buff || !lv) return alert("請選擇套裝效果 + 等級");
-                const buffCats = ["手鍊", "項鍊", "戒指", "符文石"];
+                const buffCats = ["手鍊", "項鍊", "戒指", "寶石", "符文石"];
                 for (const slot of SLOT_DEFS) {
                     if (!buffCats.includes(slot.category)) continue;
                     const found = (itemsByCategory[slot.category] || [])

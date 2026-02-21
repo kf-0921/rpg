@@ -4126,15 +4126,947 @@
     ]
   },
   {
-    "file": "d.txt",
-    "category": "5",
-    "name": "5",
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "寶石",
     "id": "",
     "level_required": 0,
     "stats": {},
     "buff": "",
     "job_required": "",
     "resources": []
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "翠綠之核",
+    "id": "J1",
+    "level_required": 40,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 18
+      },
+      {
+        "name": "破碎的哥布林面具",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "密林之核",
+    "id": "J2",
+    "level_required": 60,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 400
+      },
+      {
+        "name": "松木",
+        "amount": 250
+      },
+      {
+        "name": "杉木",
+        "amount": 180
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 25
+      },
+      {
+        "name": "完整的哥布林面具",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "大地歲月",
+    "id": "J3",
+    "level_required": 85,
+    "stats": {},
+    "buff": "哥布林的饋贈",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "紅木",
+        "amount": 120
+      },
+      {
+        "name": "桃木",
+        "amount": 40
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "哥布林徽章",
+        "amount": 40
+      },
+      {
+        "name": "哥布林的信物",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "光耀之石",
+    "id": "J4",
+    "level_required": 40,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 180
+      },
+      {
+        "name": "杉木",
+        "amount": 100
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 18
+      },
+      {
+        "name": "獸人盾牌碎片",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "光耀之心",
+    "id": "J5",
+    "level_required": 60,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "鐵",
+        "amount": 250
+      },
+      {
+        "name": "銀",
+        "amount": 180
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 25
+      },
+      {
+        "name": "獸人盾牌",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "曦光煥彩",
+    "id": "J6",
+    "level_required": 85,
+    "stats": {},
+    "buff": "獸人的加護",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "金",
+        "amount": 120
+      },
+      {
+        "name": "紅寶石",
+        "amount": 40
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "殭屍之眼",
+        "amount": 40
+      },
+      {
+        "name": "獸人的頭帶",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "月之寶石",
+    "id": "J7",
+    "level_required": 40,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 18
+      },
+      {
+        "name": "狼王毛髮",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "耀月之石",
+    "id": "J8",
+    "level_required": 60,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "鐵",
+        "amount": 250
+      },
+      {
+        "name": "銀",
+        "amount": 180
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 25
+      },
+      {
+        "name": "狼王牙齒",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "血月琉璃",
+    "id": "J9",
+    "level_required": 85,
+    "stats": {},
+    "buff": "狼王的呼喊",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "金",
+        "amount": 120
+      },
+      {
+        "name": "紅寶石",
+        "amount": 40
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "野狼牙齒",
+        "amount": 40
+      },
+      {
+        "name": "狼王的信念",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "電能之心",
+    "id": "J10",
+    "level_required": 40,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 300
+      },
+      {
+        "name": "銀",
+        "amount": 200
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "機器核心",
+        "amount": 18
+      },
+      {
+        "name": "機械零件",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "干擾之石",
+    "id": "J11",
+    "level_required": 60,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 1000
+      },
+      {
+        "name": "鐵",
+        "amount": 500
+      },
+      {
+        "name": "銀",
+        "amount": 300
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "機器核心",
+        "amount": 25
+      },
+      {
+        "name": "電子芯片",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "幻玥時空",
+    "id": "J12",
+    "level_required": 85,
+    "stats": {},
+    "buff": "異常矩陣",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "金",
+        "amount": 300
+      },
+      {
+        "name": "紅寶石",
+        "amount": 100
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "機器核心",
+        "amount": 40
+      },
+      {
+        "name": "奈米合金",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "狐尾護符",
+    "id": "J13",
+    "level_required": 40,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 18
+      },
+      {
+        "name": "妖狐之尾",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "幽狐之石",
+    "id": "J14",
+    "level_required": 60,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 1000
+      },
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 25
+      },
+      {
+        "name": "靈魂狐爪",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "靈焱心鎖",
+    "id": "J15",
+    "level_required": 85,
+    "stats": {},
+    "buff": "妖狐共鳴",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "紅木",
+        "amount": 300
+      },
+      {
+        "name": "桃木",
+        "amount": 100
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "狐狸尾巴",
+        "amount": 40
+      },
+      {
+        "name": "幻視妖狐面具",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "毒鬚護符",
+    "id": "J16",
+    "level_required": 40,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "鐵",
+        "amount": 200
+      },
+      {
+        "name": "銀",
+        "amount": 150
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 18
+      },
+      {
+        "name": "劇毒根鬚",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "邪毒之石",
+    "id": "J17",
+    "level_required": 60,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 400
+      },
+      {
+        "name": "鐵",
+        "amount": 250
+      },
+      {
+        "name": "銀",
+        "amount": 180
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 400
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 25
+      },
+      {
+        "name": "猛毒內核",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "毒母支配",
+    "id": "J18",
+    "level_required": 85,
+    "stats": {},
+    "buff": "毒心之觸",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "金",
+        "amount": 120
+      },
+      {
+        "name": "紅寶石",
+        "amount": 40
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      },
+      {
+        "name": "動物皮毛",
+        "amount": 600
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "劇毒之心",
+        "amount": 40
+      },
+      {
+        "name": "毒母之心",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "秘製水晶",
+    "id": "J19",
+    "level_required": 40,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 100
+      },
+      {
+        "name": "鐵",
+        "amount": 150
+      },
+      {
+        "name": "銀",
+        "amount": 90
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 18
+      },
+      {
+        "name": "藍色藥水",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "融石晶體",
+    "id": "J20",
+    "level_required": 60,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "碎石",
+        "amount": 500
+      },
+      {
+        "name": "銀",
+        "amount": 160
+      },
+      {
+        "name": "金",
+        "amount": 70
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 25
+      },
+      {
+        "name": "生物混合塊",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "混沌魔心",
+    "id": "J21",
+    "level_required": 85,
+    "stats": {},
+    "buff": "鑄心煉血",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "銀",
+        "amount": 350
+      },
+      {
+        "name": "金",
+        "amount": 100
+      },
+      {
+        "name": "紅寶石",
+        "amount": 40
+      },
+      {
+        "name": "紫水晶",
+        "amount": 1
+      },
+      {
+        "name": "動物骨頭",
+        "amount": 230
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "空藥水瓶",
+        "amount": 40
+      },
+      {
+        "name": "混沌水晶體",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "螯赤砂石",
+    "id": "J22",
+    "level_required": 40,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "松木",
+        "amount": 300
+      },
+      {
+        "name": "杉木",
+        "amount": 200
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 100
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 8
+      },
+      {
+        "name": "蟹螯",
+        "amount": 18
+      },
+      {
+        "name": "龍蝦觸鬚",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "螯龍碧石",
+    "id": "J23",
+    "level_required": 60,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "原木",
+        "amount": 1000
+      },
+      {
+        "name": "松木",
+        "amount": 500
+      },
+      {
+        "name": "杉木",
+        "amount": 300
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 150
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 15
+      },
+      {
+        "name": "蟹螯",
+        "amount": 25
+      },
+      {
+        "name": "龍蝦厚殼",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "file": "diamond.txt",
+    "category": "寶石",
+    "name": "浪湧螯龍",
+    "id": "J24",
+    "level_required": 85,
+    "stats": {},
+    "buff": "暗潮紅影",
+    "job_required": "",
+    "resources": [
+      {
+        "name": "紅木",
+        "amount": 300
+      },
+      {
+        "name": "桃木",
+        "amount": 100
+      },
+      {
+        "name": "紫檀木",
+        "amount": 1
+      },
+      {
+        "name": "動物脂肪",
+        "amount": 200
+      },
+      {
+        "name": "勞贖的料理",
+        "amount": 30
+      },
+      {
+        "name": "蟹螯",
+        "amount": 40
+      },
+      {
+        "name": "龍蝦巨螯",
+        "amount": 50
+      }
+    ]
   },
   {
     "file": "necklace.txt",
