@@ -5,7 +5,14 @@
     "name": "學徒木杖",
     "id": "A1",
     "level_required": 1,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        4,
+        6,
+        8,
+        10
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -29,7 +36,14 @@
     "name": "琉木法杖",
     "id": "A2",
     "level_required": 7,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        6,
+        9,
+        12,
+        16
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -53,7 +67,14 @@
     "name": "冒險者之杖",
     "id": "A3",
     "level_required": 16,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        12,
+        16,
+        22,
+        28
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -81,7 +102,14 @@
     "name": "古藤法杖",
     "id": "A4",
     "level_required": 23,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        20,
+        26,
+        31,
+        36
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -105,7 +133,14 @@
     "name": "犄骨法杖",
     "id": "A5",
     "level_required": 30,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        28,
+        33,
+        37,
+        44
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -129,7 +164,14 @@
     "name": "密林之杖",
     "id": "A6",
     "level_required": 38,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        32,
+        37,
+        42,
+        52
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -153,7 +195,14 @@
     "name": "機鎖法杖",
     "id": "A7",
     "level_required": 44,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        40,
+        44,
+        55,
+        67
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -185,7 +234,14 @@
     "name": "鎏光法杖",
     "id": "A8",
     "level_required": 50,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        50,
+        58,
+        67,
+        80
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -217,7 +273,14 @@
     "name": "硰塵之杖",
     "id": "A9",
     "level_required": 60,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        66,
+        74,
+        83,
+        95
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -249,7 +312,14 @@
     "name": "禁咒之杖",
     "id": "A10",
     "level_required": 70,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        75,
+        84,
+        93,
+        108
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -285,7 +355,14 @@
     "name": "水晶權杖",
     "id": "A11",
     "level_required": 85,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        100,
+        108,
+        117,
+        130
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -313,7 +390,14 @@
     "name": "花境之杖",
     "id": "A12",
     "level_required": 85,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        100,
+        108,
+        117,
+        130
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -341,7 +425,14 @@
     "name": "學徒魔法書",
     "id": "B1",
     "level_required": 1,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        3,
+        6,
+        8,
+        11
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -365,7 +456,14 @@
     "name": "琉木法球",
     "id": "B2",
     "level_required": 7,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        5,
+        9,
+        12,
+        17
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -389,7 +487,14 @@
     "name": "冒險者寶典",
     "id": "B3",
     "level_required": 16,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        10,
+        18,
+        22,
+        30
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -417,7 +522,14 @@
     "name": "古藤密籍",
     "id": "B4",
     "level_required": 23,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        17,
+        26,
+        31,
+        39
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -445,7 +557,14 @@
     "name": "犄骨密書",
     "id": "B5",
     "level_required": 30,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        24,
+        29,
+        37,
+        48
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -473,7 +592,14 @@
     "name": "密林法書",
     "id": "B6",
     "level_required": 38,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        28,
+        37,
+        42,
+        56
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -501,7 +627,14 @@
     "name": "機鎖人偶",
     "id": "B7",
     "level_required": 44,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        32,
+        40,
+        55,
+        72
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -529,7 +662,14 @@
     "name": "鎏光法球",
     "id": "B8",
     "level_required": 50,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        40,
+        52,
+        71,
+        90
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -557,7 +697,14 @@
     "name": "硰塵法典",
     "id": "B9",
     "level_required": 60,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        55,
+        72,
+        83,
+        105
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -589,7 +736,14 @@
     "name": "禁咒密典",
     "id": "B10",
     "level_required": 70,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        65,
+        79,
+        91,
+        120
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -621,7 +775,14 @@
     "name": "水晶法典",
     "id": "B11",
     "level_required": 85,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        80,
+        95,
+        120,
+        150
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -649,7 +810,14 @@
     "name": "花境密典",
     "id": "B12",
     "level_required": 85,
-    "stats": {},
+    "stats": {
+      "攻擊力_vals": [
+        80,
+        95,
+        120,
+        150
+      ]
+    },
     "buff": "",
     "job_required": "",
     "resources": [
@@ -678,10 +846,18 @@
     "id": "C1",
     "level_required": 1,
     "stats": {
-      "血量_min": 2,
-      "血量_max": 7,
-      "防禦力_min": 5,
-      "防禦力_max": 13
+      "血量_vals": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "防禦力_vals": [
+        5,
+        7,
+        11,
+        13
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -699,10 +875,18 @@
     "id": "C2",
     "level_required": 7,
     "stats": {
-      "血量_min": 5,
-      "血量_max": 12,
-      "防禦力_min": 9,
-      "防禦力_max": 17
+      "血量_vals": [
+        5,
+        7,
+        9,
+        12
+      ],
+      "防禦力_vals": [
+        9,
+        11,
+        14,
+        17
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -724,10 +908,18 @@
     "id": "C3",
     "level_required": 16,
     "stats": {
-      "血量_min": 8,
-      "血量_max": 17,
-      "防禦力_min": 12,
-      "防禦力_max": 21
+      "血量_vals": [
+        8,
+        12,
+        15,
+        17
+      ],
+      "防禦力_vals": [
+        12,
+        15,
+        17,
+        21
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -753,10 +945,18 @@
     "id": "C4",
     "level_required": 23,
     "stats": {
-      "血量_min": 12,
-      "血量_max": 21,
-      "防禦力_min": 16,
-      "防禦力_max": 26
+      "血量_vals": [
+        12,
+        15,
+        17,
+        21
+      ],
+      "防禦力_vals": [
+        16,
+        19,
+        23,
+        26
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -782,10 +982,18 @@
     "id": "C5",
     "level_required": 30,
     "stats": {
-      "血量_min": 15,
-      "血量_max": 21,
-      "防禦力_min": 20,
-      "防禦力_max": 31
+      "血量_vals": [
+        12,
+        17,
+        19,
+        21
+      ],
+      "防禦力_vals": [
+        20,
+        23,
+        27,
+        31
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -811,10 +1019,18 @@
     "id": "C6",
     "level_required": 38,
     "stats": {
-      "血量_min": 18,
-      "血量_max": 33,
-      "防禦力_min": 26,
-      "防禦力_max": 39
+      "血量_vals": [
+        1,
+        26,
+        27,
+        33
+      ],
+      "防禦力_vals": [
+        8,
+        21,
+        33,
+        39
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -844,10 +1060,18 @@
     "id": "C7",
     "level_required": 44,
     "stats": {
-      "血量_min": 23,
-      "血量_max": 39,
-      "防禦力_min": 31,
-      "防禦力_max": 44
+      "血量_vals": [
+        23,
+        29,
+        33,
+        39
+      ],
+      "防禦力_vals": [
+        31,
+        35,
+        39,
+        44
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -881,10 +1105,18 @@
     "id": "C8",
     "level_required": 50,
     "stats": {
-      "血量_min": 30,
-      "血量_max": 50,
-      "防禦力_min": 40,
-      "防禦力_max": 50
+      "血量_vals": [
+        30,
+        35,
+        42,
+        50
+      ],
+      "防禦力_vals": [
+        40,
+        43,
+        46,
+        50
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -918,10 +1150,18 @@
     "id": "C9",
     "level_required": 60,
     "stats": {
-      "血量_min": 42,
-      "血量_max": 54,
-      "防禦力_min": 48,
-      "防禦力_max": 60
+      "血量_vals": [
+        42,
+        45,
+        49,
+        54
+      ],
+      "防禦力_vals": [
+        48,
+        53,
+        56,
+        60
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -955,10 +1195,18 @@
     "id": "C10",
     "level_required": 70,
     "stats": {
-      "血量_min": 45,
-      "血量_max": 60,
-      "防禦力_min": 53,
-      "防禦力_max": 70
+      "血量_vals": [
+        45,
+        49,
+        54,
+        60
+      ],
+      "防禦力_vals": [
+        53,
+        58,
+        63,
+        70
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -992,10 +1240,18 @@
     "id": "C11",
     "level_required": 85,
     "stats": {
-      "血量_min": 55,
-      "血量_max": 70,
-      "防禦力_min": 65,
-      "防禦力_max": 85
+      "血量_vals": [
+        55,
+        60,
+        65,
+        70
+      ],
+      "防禦力_vals": [
+        65,
+        70,
+        80,
+        85
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1025,10 +1281,18 @@
     "id": "C12",
     "level_required": 85,
     "stats": {
-      "血量_min": 81,
-      "血量_max": 104,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        81,
+        88,
+        96,
+        104
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1062,10 +1326,18 @@
     "id": "C13",
     "level_required": 95,
     "stats": {
-      "血量_min": 60,
-      "血量_max": 75,
-      "防禦力_min": 70,
-      "防禦力_max": 95
+      "血量_vals": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "防禦力_vals": [
+        70,
+        77,
+        85,
+        95
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1103,10 +1375,18 @@
     "id": "C14",
     "level_required": 95,
     "stats": {
-      "血量_min": 90,
-      "血量_max": 115,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        90,
+        97,
+        105,
+        115
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1144,10 +1424,18 @@
     "id": "D1",
     "level_required": 1,
     "stats": {
-      "血量_min": 5,
-      "血量_max": 11,
-      "防禦力_min": 11,
-      "防禦力_max": 19
+      "血量_vals": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "防禦力_vals": [
+        11,
+        13,
+        16,
+        19
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1165,10 +1453,18 @@
     "id": "D2",
     "level_required": 7,
     "stats": {
-      "血量_min": 7,
-      "血量_max": 14,
-      "防禦力_min": 15,
-      "防禦力_max": 24
+      "血量_vals": [
+        7,
+        9,
+        11,
+        14
+      ],
+      "防禦力_vals": [
+        15,
+        17,
+        21,
+        24
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1194,10 +1490,18 @@
     "id": "D3",
     "level_required": 16,
     "stats": {
-      "血量_min": 10,
-      "血量_max": 21,
-      "防禦力_min": 20,
-      "防禦力_max": 33
+      "血量_vals": [
+        10,
+        13,
+        17,
+        21
+      ],
+      "防禦力_vals": [
+        20,
+        23,
+        27,
+        33
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1223,10 +1527,18 @@
     "id": "D4",
     "level_required": 23,
     "stats": {
-      "血量_min": 17,
-      "血量_max": 32,
-      "防禦力_min": 25,
-      "防禦力_max": 38
+      "血量_vals": [
+        17,
+        21,
+        26,
+        32
+      ],
+      "防禦力_vals": [
+        25,
+        29,
+        33,
+        38
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1252,10 +1564,18 @@
     "id": "D5",
     "level_required": 30,
     "stats": {
-      "血量_min": 23,
-      "血量_max": 39,
-      "防禦力_min": 32,
-      "防禦力_max": 46
+      "血量_vals": [
+        23,
+        27,
+        32,
+        39
+      ],
+      "防禦力_vals": [
+        32,
+        35,
+        40,
+        46
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1281,10 +1601,18 @@
     "id": "D6",
     "level_required": 38,
     "stats": {
-      "血量_min": 32,
-      "血量_max": 48,
-      "防禦力_min": 38,
-      "防禦力_max": 52
+      "血量_vals": [
+        32,
+        37,
+        43,
+        48
+      ],
+      "防禦力_vals": [
+        38,
+        42,
+        48,
+        52
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1314,10 +1642,18 @@
     "id": "D7",
     "level_required": 44,
     "stats": {
-      "血量_min": 41,
-      "血量_max": 55,
-      "防禦力_min": 44,
-      "防禦力_max": 59
+      "血量_vals": [
+        41,
+        45,
+        50,
+        55
+      ],
+      "防禦力_vals": [
+        44,
+        49,
+        54,
+        59
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1351,10 +1687,18 @@
     "id": "D8",
     "level_required": 50,
     "stats": {
-      "血量_min": 50,
-      "血量_max": 65,
-      "防禦力_min": 50,
-      "防禦力_max": 70
+      "血量_vals": [
+        50,
+        54,
+        59,
+        65
+      ],
+      "防禦力_vals": [
+        50,
+        55,
+        62,
+        70
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1388,10 +1732,18 @@
     "id": "D9",
     "level_required": 60,
     "stats": {
-      "血量_min": 56,
-      "血量_max": 77,
-      "防禦力_min": 63,
-      "防禦力_max": 80
+      "血量_vals": [
+        56,
+        60,
+        69,
+        77
+      ],
+      "防禦力_vals": [
+        63,
+        68,
+        74,
+        80
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1425,10 +1777,18 @@
     "id": "D10",
     "level_required": 70,
     "stats": {
-      "血量_min": 60,
-      "血量_max": 83,
-      "防禦力_min": 68,
-      "防禦力_max": 85
+      "血量_vals": [
+        60,
+        68,
+        77,
+        83
+      ],
+      "防禦力_vals": [
+        68,
+        74,
+        80,
+        85
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1462,10 +1822,18 @@
     "id": "D11",
     "level_required": 85,
     "stats": {
-      "血量_min": 77,
-      "血量_max": 95,
-      "防禦力_min": 80,
-      "防禦力_max": 100
+      "血量_vals": [
+        77,
+        83,
+        88,
+        95
+      ],
+      "防禦力_vals": [
+        80,
+        85,
+        90,
+        100
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1499,10 +1867,18 @@
     "id": "D12",
     "level_required": 85,
     "stats": {
-      "血量_min": 110,
-      "血量_max": 135,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        110,
+        118,
+        126,
+        135
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1540,10 +1916,18 @@
     "id": "D13",
     "level_required": 95,
     "stats": {
-      "血量_min": 83,
-      "血量_max": 100,
-      "防禦力_min": 90,
-      "防禦力_max": 110
+      "血量_vals": [
+        83,
+        88,
+        95,
+        100
+      ],
+      "防禦力_vals": [
+        90,
+        96,
+        103,
+        110
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1585,10 +1969,18 @@
     "id": "D14",
     "level_required": 95,
     "stats": {
-      "血量_min": 120,
-      "血量_max": 150,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        120,
+        130,
+        140,
+        150
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1630,10 +2022,18 @@
     "id": "E1",
     "level_required": 1,
     "stats": {
-      "血量_min": 3,
-      "血量_max": 8,
-      "防禦力_min": 9,
-      "防禦力_max": 16
+      "血量_vals": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "防禦力_vals": [
+        9,
+        11,
+        14,
+        16
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1651,10 +2051,18 @@
     "id": "E2",
     "level_required": 7,
     "stats": {
-      "血量_min": 5,
-      "血量_max": 11,
-      "防禦力_min": 11,
-      "防禦力_max": 19
+      "血量_vals": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "防禦力_vals": [
+        11,
+        14,
+        17,
+        19
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1676,10 +2084,18 @@
     "id": "E3",
     "level_required": 16,
     "stats": {
-      "血量_min": 7,
-      "血量_max": 15,
-      "防禦力_min": 14,
-      "防禦力_max": 24
+      "血量_vals": [
+        7,
+        9,
+        12,
+        15
+      ],
+      "防禦力_vals": [
+        14,
+        17,
+        20,
+        24
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1705,10 +2121,18 @@
     "id": "E4",
     "level_required": 23,
     "stats": {
-      "血量_min": 11,
-      "血量_max": 21,
-      "防禦力_min": 17,
-      "防禦力_max": 29
+      "血量_vals": [
+        11,
+        14,
+        18,
+        21
+      ],
+      "防禦力_vals": [
+        17,
+        20,
+        24,
+        29
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1734,10 +2158,18 @@
     "id": "E5",
     "level_required": 30,
     "stats": {
-      "血量_min": 17,
-      "血量_max": 30,
-      "防禦力_min": 22,
-      "防禦力_max": 35
+      "血量_vals": [
+        17,
+        20,
+        24,
+        30
+      ],
+      "防禦力_vals": [
+        22,
+        26,
+        30,
+        35
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1763,10 +2195,18 @@
     "id": "E6",
     "level_required": 38,
     "stats": {
-      "血量_min": 23,
-      "血量_max": 36,
-      "防禦力_min": 29,
-      "防禦力_max": 41
+      "血量_vals": [
+        23,
+        27,
+        31,
+        36
+      ],
+      "防禦力_vals": [
+        29,
+        33,
+        37,
+        41
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1796,10 +2236,18 @@
     "id": "E7",
     "level_required": 44,
     "stats": {
-      "血量_min": 28,
-      "血量_max": 44,
-      "防禦力_min": 35,
-      "防禦力_max": 47
+      "血量_vals": [
+        28,
+        32,
+        37,
+        44
+      ],
+      "防禦力_vals": [
+        35,
+        39,
+        43,
+        47
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1833,10 +2281,18 @@
     "id": "E8",
     "level_required": 50,
     "stats": {
-      "血量_min": 35,
-      "血量_max": 55,
-      "防禦力_min": 55,
-      "防禦力_max": 65
+      "血量_vals": [
+        35,
+        40,
+        48,
+        55
+      ],
+      "防禦力_vals": [
+        55,
+        57,
+        60,
+        65
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1870,10 +2326,18 @@
     "id": "E9",
     "level_required": 60,
     "stats": {
-      "血量_min": 43,
-      "血量_max": 64,
-      "防禦力_min": 62,
-      "防禦力_max": 77
+      "血量_vals": [
+        43,
+        48,
+        55,
+        64
+      ],
+      "防禦力_vals": [
+        62,
+        67,
+        72,
+        77
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1907,10 +2371,18 @@
     "id": "E10",
     "level_required": 70,
     "stats": {
-      "血量_min": 48,
-      "血量_max": 69,
-      "防禦力_min": 67,
-      "防禦力_max": 80
+      "血量_vals": [
+        48,
+        55,
+        62,
+        69
+      ],
+      "防禦力_vals": [
+        67,
+        72,
+        77,
+        80
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1944,10 +2416,18 @@
     "id": "E11",
     "level_required": 85,
     "stats": {
-      "血量_min": 65,
-      "血量_max": 80,
-      "防禦力_min": 77,
-      "防禦力_max": 90
+      "血量_vals": [
+        65,
+        70,
+        75,
+        80
+      ],
+      "防禦力_vals": [
+        77,
+        81,
+        85,
+        90
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -1981,10 +2461,18 @@
     "id": "E12",
     "level_required": 85,
     "stats": {
-      "血量_min": 95,
-      "血量_max": 116,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        95,
+        102,
+        110,
+        116
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2022,10 +2510,18 @@
     "id": "E13",
     "level_required": 95,
     "stats": {
-      "血量_min": 70,
-      "血量_max": 85,
-      "防禦力_min": 82,
-      "防禦力_max": 98
+      "血量_vals": [
+        70,
+        75,
+        80,
+        85
+      ],
+      "防禦力_vals": [
+        82,
+        87,
+        92,
+        98
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2067,10 +2563,18 @@
     "id": "E14",
     "level_required": 95,
     "stats": {
-      "血量_min": 100,
-      "血量_max": 125,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        100,
+        110,
+        117,
+        125
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2112,10 +2616,18 @@
     "id": "F1",
     "level_required": 1,
     "stats": {
-      "血量_min": 1,
-      "血量_max": 5,
-      "防禦力_min": 4,
-      "防禦力_max": 10
+      "血量_vals": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "防禦力_vals": [
+        4,
+        6,
+        8,
+        10
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2133,10 +2645,18 @@
     "id": "F2",
     "level_required": 7,
     "stats": {
-      "血量_min": 3,
-      "血量_max": 9,
-      "防禦力_min": 7,
-      "防禦力_max": 13
+      "血量_vals": [
+        3,
+        5,
+        9,
+        9
+      ],
+      "防禦力_vals": [
+        7,
+        9,
+        11,
+        13
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2158,10 +2678,18 @@
     "id": "F3",
     "level_required": 16,
     "stats": {
-      "血量_min": 5,
-      "血量_max": 12,
-      "防禦力_min": 10,
-      "防禦力_max": 18
+      "血量_vals": [
+        5,
+        7,
+        9,
+        12
+      ],
+      "防禦力_vals": [
+        10,
+        12,
+        15,
+        18
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2187,10 +2715,18 @@
     "id": "F4",
     "level_required": 23,
     "stats": {
-      "血量_min": 8,
-      "血量_max": 17,
-      "防禦力_min": 12,
-      "防禦力_max": 21
+      "血量_vals": [
+        8,
+        12,
+        15,
+        17
+      ],
+      "防禦力_vals": [
+        12,
+        15,
+        18,
+        21
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2216,10 +2752,18 @@
     "id": "F5",
     "level_required": 30,
     "stats": {
-      "血量_min": 12,
-      "血量_max": 21,
-      "防禦力_min": 16,
-      "防禦力_max": 26
+      "血量_vals": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "防禦力_vals": [
+        16,
+        19,
+        23,
+        26
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2245,10 +2789,18 @@
     "id": "F6",
     "level_required": 38,
     "stats": {
-      "血量_min": 15,
-      "血量_max": 27,
-      "防禦力_min": 20,
-      "防禦力_max": 31
+      "血量_vals": [
+        15,
+        19,
+        23,
+        27
+      ],
+      "防禦力_vals": [
+        20,
+        24,
+        28,
+        31
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2278,10 +2830,18 @@
     "id": "F7",
     "level_required": 44,
     "stats": {
-      "血量_min": 18,
-      "血量_max": 33,
-      "防禦力_min": 26,
-      "防禦力_max": 39
+      "血量_vals": [
+        18,
+        22,
+        27,
+        33
+      ],
+      "防禦力_vals": [
+        26,
+        30,
+        34,
+        39
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2315,10 +2875,18 @@
     "id": "F8",
     "level_required": 50,
     "stats": {
-      "血量_min": 25,
-      "血量_max": 45,
-      "防禦力_min": 30,
-      "防禦力_max": 45
+      "血量_vals": [
+        25,
+        30,
+        35,
+        45
+      ],
+      "防禦力_vals": [
+        30,
+        35,
+        40,
+        45
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2352,10 +2920,18 @@
     "id": "F9",
     "level_required": 60,
     "stats": {
-      "血量_min": 32,
-      "血量_max": 57,
-      "防禦力_min": 40,
-      "防禦力_max": 55
+      "血量_vals": [
+        32,
+        38,
+        46,
+        57
+      ],
+      "防禦力_vals": [
+        40,
+        45,
+        50,
+        55
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2385,10 +2961,18 @@
     "id": "F10",
     "level_required": 70,
     "stats": {
-      "血量_min": 38,
-      "血量_max": 63,
-      "防禦力_min": 45,
-      "防禦力_max": 60
+      "血量_vals": [
+        38,
+        46,
+        55,
+        63
+      ],
+      "防禦力_vals": [
+        45,
+        50,
+        55,
+        60
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2422,10 +3006,18 @@
     "id": "F11",
     "level_required": 85,
     "stats": {
-      "血量_min": 50,
-      "血量_max": 65,
-      "防禦力_min": 55,
-      "防禦力_max": 75
+      "血量_vals": [
+        50,
+        55,
+        60,
+        65
+      ],
+      "防禦力_vals": [
+        55,
+        62,
+        69,
+        75
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2455,10 +3047,18 @@
     "id": "F12",
     "level_required": 85,
     "stats": {
-      "血量_min": 72,
-      "血量_max": 95,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        72,
+        79,
+        87,
+        95
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2492,10 +3092,18 @@
     "id": "F13",
     "level_required": 95,
     "stats": {
-      "血量_min": 55,
-      "血量_max": 70,
-      "防禦力_min": 60,
-      "防禦力_max": 82
+      "血量_vals": [
+        55,
+        60,
+        65,
+        70
+      ],
+      "防禦力_vals": [
+        60,
+        66,
+        73,
+        82
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2533,10 +3141,18 @@
     "id": "F14",
     "level_required": 95,
     "stats": {
-      "血量_min": 80,
-      "血量_max": 105,
-      "防禦力_min": 0,
-      "防禦力_max": 0
+      "血量_vals": [
+        80,
+        88,
+        95,
+        105
+      ],
+      "防禦力_vals": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "buff": "",
     "job_required": "",
@@ -2569,7 +3185,18 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
+    "name": "手鍊",
+    "id": "",
+    "level_required": 0,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": []
+  },
+  {
+    "file": "bracelet.txt",
+    "category": "手鍊",
     "name": "生命之觸",
     "id": "H1",
     "level_required": 40,
@@ -2601,7 +3228,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "死亡之觸",
     "id": "H2",
     "level_required": 60,
@@ -2641,7 +3268,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "密林守護",
     "id": "H3",
     "level_required": 85,
@@ -2681,7 +3308,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "獸牙手鍊",
     "id": "H4",
     "level_required": 40,
@@ -2713,7 +3340,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "獸骨手鍊",
     "id": "H5",
     "level_required": 60,
@@ -2753,7 +3380,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "獸神幻影",
     "id": "H6",
     "level_required": 85,
@@ -2793,7 +3420,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "嗜血手鍊",
     "id": "H7",
     "level_required": 40,
@@ -2825,7 +3452,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "狂暴之鍊",
     "id": "H8",
     "level_required": 60,
@@ -2865,7 +3492,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "血怒鬼眼",
     "id": "H9",
     "level_required": 85,
@@ -2905,7 +3532,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "機械之觸",
     "id": "H10",
     "level_required": 40,
@@ -2937,7 +3564,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "電能控制",
     "id": "H11",
     "level_required": 60,
@@ -2977,7 +3604,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "微型磁場",
     "id": "H12",
     "level_required": 85,
@@ -3017,7 +3644,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "迷香手鐲",
     "id": "H13",
     "level_required": 40,
@@ -3049,7 +3676,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "鍊魂手鐲",
     "id": "H14",
     "level_required": 60,
@@ -3089,7 +3716,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "攝魂心魄",
     "id": "H15",
     "level_required": 85,
@@ -3129,7 +3756,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "磷毒手鍊",
     "id": "H16",
     "level_required": 40,
@@ -3161,7 +3788,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "磷化手環",
     "id": "H17",
     "level_required": 60,
@@ -3201,7 +3828,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "艷妖磷環",
     "id": "H18",
     "level_required": 85,
@@ -3241,7 +3868,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "晶體手環",
     "id": "H19",
     "level_required": 40,
@@ -3273,7 +3900,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "魔能手鍊",
     "id": "H20",
     "level_required": 60,
@@ -3313,7 +3940,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "秘術權能",
     "id": "H21",
     "level_required": 85,
@@ -3353,7 +3980,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "蝦殼手環",
     "id": "H22",
     "level_required": 40,
@@ -3385,7 +4012,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "螯龍鐲鍊",
     "id": "H23",
     "level_required": 60,
@@ -3425,7 +4052,7 @@
   },
   {
     "file": "bracelet.txt",
-    "category": "生命之觸",
+    "category": "手鍊",
     "name": "巨螯之影",
     "id": "H24",
     "level_required": 85,
@@ -3499,8 +4126,30 @@
     ]
   },
   {
+    "file": "d.txt",
+    "category": "5",
+    "name": "5",
+    "id": "",
+    "level_required": 0,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": []
+  },
+  {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
+    "name": "項鍊",
+    "id": "",
+    "level_required": 0,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": []
+  },
+  {
+    "file": "necklace.txt",
+    "category": "項鍊",
     "name": "野蠻之爪",
     "id": "G1",
     "level_required": 40,
@@ -3532,7 +4181,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "嗜血之爪",
     "id": "G2",
     "level_required": 60,
@@ -3572,7 +4221,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "貪婪之爪",
     "id": "G3",
     "level_required": 85,
@@ -3612,7 +4261,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "獸靈結晶",
     "id": "G4",
     "level_required": 40,
@@ -3644,7 +4293,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "獸靈凝華",
     "id": "G5",
     "level_required": 60,
@@ -3684,7 +4333,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "獸靈祝福",
     "id": "G6",
     "level_required": 85,
@@ -3724,7 +4373,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "鋒銳之牙",
     "id": "G7",
     "level_required": 40,
@@ -3756,7 +4405,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "狼王白鬃",
     "id": "G8",
     "level_required": 60,
@@ -3796,7 +4445,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "貪狼爪",
     "id": "G9",
     "level_required": 85,
@@ -3836,7 +4485,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "機巧晶片",
     "id": "G10",
     "level_required": 40,
@@ -3868,7 +4517,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "高階芯片",
     "id": "G11",
     "level_required": 60,
@@ -3908,7 +4557,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "機械之眼",
     "id": "G12",
     "level_required": 85,
@@ -3948,7 +4597,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "安神項鍊",
     "id": "G13",
     "level_required": 40,
@@ -3980,7 +4629,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "靈狐纏繞",
     "id": "G14",
     "level_required": 60,
@@ -4020,7 +4669,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "靈狐咒力",
     "id": "G15",
     "level_required": 85,
@@ -4060,7 +4709,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "荊棘之環",
     "id": "G16",
     "level_required": 40,
@@ -4092,7 +4741,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "血毒項鍊",
     "id": "G17",
     "level_required": 60,
@@ -4132,7 +4781,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "血妖凝視",
     "id": "G18",
     "level_required": 85,
@@ -4172,7 +4821,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "粗製掛墜",
     "id": "G19",
     "level_required": 40,
@@ -4204,7 +4853,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "精煉掛墜",
     "id": "G20",
     "level_required": 60,
@@ -4244,7 +4893,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "動能核心",
     "id": "G21",
     "level_required": 85,
@@ -4284,7 +4933,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "硬殼鍊墜",
     "id": "G22",
     "level_required": 40,
@@ -4316,7 +4965,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "蝦殼之鍊",
     "id": "G23",
     "level_required": 60,
@@ -4356,7 +5005,7 @@
   },
   {
     "file": "necklace.txt",
-    "category": "野蠻之爪",
+    "category": "項鍊",
     "name": "海妖之心",
     "id": "G24",
     "level_required": 85,
@@ -4396,7 +5045,18 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
+    "name": "戒指",
+    "id": "",
+    "level_required": 0,
+    "stats": {},
+    "buff": "",
+    "job_required": "",
+    "resources": []
+  },
+  {
+    "file": "ring.txt",
+    "category": "戒指",
     "name": "自然之握",
     "id": "I1",
     "level_required": 40,
@@ -4428,7 +5088,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "萬物寶戒",
     "id": "I2",
     "level_required": 60,
@@ -4468,7 +5128,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "萬化淨彩",
     "id": "I3",
     "level_required": 85,
@@ -4508,7 +5168,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "骨戒",
     "id": "I4",
     "level_required": 40,
@@ -4540,7 +5200,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "骨獸魂戒",
     "id": "I5",
     "level_required": 60,
@@ -4580,7 +5240,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "獸王回憶",
     "id": "I6",
     "level_required": 85,
@@ -4620,7 +5280,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "暗影之戒",
     "id": "I7",
     "level_required": 40,
@@ -4652,7 +5312,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "暗夜之戒",
     "id": "I8",
     "level_required": 60,
@@ -4692,7 +5352,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "夜神永恆",
     "id": "I9",
     "level_required": 85,
@@ -4732,7 +5392,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "電磁屏蔽",
     "id": "I10",
     "level_required": 40,
@@ -4764,7 +5424,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "無限迴路",
     "id": "I11",
     "level_required": 60,
@@ -4804,7 +5464,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "永世夢境",
     "id": "I12",
     "level_required": 85,
@@ -4844,7 +5504,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "靈巧之戒",
     "id": "I13",
     "level_required": 40,
@@ -4876,7 +5536,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "妖魅幻音",
     "id": "I14",
     "level_required": 60,
@@ -4916,7 +5576,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "狡黠幻影",
     "id": "I15",
     "level_required": 85,
@@ -4956,7 +5616,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "花妖戒指",
     "id": "I16",
     "level_required": 40,
@@ -4988,7 +5648,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "血蓮之戒",
     "id": "I17",
     "level_required": 60,
@@ -5028,7 +5688,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "毒花血靈",
     "id": "I18",
     "level_required": 85,
@@ -5068,7 +5728,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "靈心戒指",
     "id": "I19",
     "level_required": 40,
@@ -5100,7 +5760,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "靈空指環",
     "id": "I20",
     "level_required": 60,
@@ -5140,7 +5800,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "煉魔靈戒",
     "id": "I21",
     "level_required": 85,
@@ -5180,7 +5840,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "蝦尾指環",
     "id": "I22",
     "level_required": 40,
@@ -5212,7 +5872,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "蝦心之戒",
     "id": "I23",
     "level_required": 60,
@@ -5252,7 +5912,7 @@
   },
   {
     "file": "ring.txt",
-    "category": "自然之握",
+    "category": "戒指",
     "name": "蝦龍神行",
     "id": "I24",
     "level_required": 85,
