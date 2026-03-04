@@ -16,7 +16,9 @@ def parse_item(lines, file_name, category):
         "stats": {},
         "buff": "",
         "job_required": "",
-        "resources": []
+        "resources": [],
+        "primary_attrs": [],  # Store all primary attributes
+        "secondary_attrs": []
     }
 
     for line in lines[1:]:
@@ -45,6 +47,32 @@ def parse_item(lines, file_name, category):
 
         if line.startswith("職業需求:"):
             item["job_required"] = line.split(":", 1)[1].strip()
+            continue
+
+        # Parse primary attributes (主屬性) - store all of them
+        if line.startswith("主屬性:"):
+            parts = line.split(":", 1)[1].strip().split(":", 1)
+            if len(parts) == 2:
+                attr_name = parts[0].strip()
+                values_str = parts[1].strip()
+                vals = [int(v.strip()) for v in values_str.split(",")]
+                item["primary_attrs"].append({
+                    "name": attr_name,
+                    "values": vals[:4]  # [稀有, 史詩, 神話, 傳奇]
+                })
+            continue
+
+        # Parse secondary attributes (副屬性)
+        if line.startswith("副屬性:"):
+            parts = line.split(":", 1)[1].strip().split(":", 1)
+            if len(parts) == 2:
+                attr_name = parts[0].strip()
+                values_str = parts[1].strip()
+                vals = [int(v.strip()) for v in values_str.split(",")]
+                item["secondary_attrs"].append({
+                    "name": attr_name,
+                    "values": vals[:4]  # [稀有, 史詩, 神話, 傳奇]
+                })
             continue
 
         if "~" in line and (":" in line or "：" in line):

@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>裝備套裝比較工具</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 24px;
+            max-width: 1600px;
+            margin: 0 auto;
+            background: #f9fafb;
+        }
+
+        h1 {
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: #e5e7eb;
+            color: #1f2937;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #d1d5db;
+        }
+
+        h2 {
+            color: #374151;
+            margin-top: 32px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        .selector-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .slot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .equipment-slot {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .sub-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .sub-row.vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sub-row.vertical .sub-col {
+            border-bottom: 1px solid #f3f4f6;
+            padding-bottom: 8px;
+        }
+
+        .sub-row.vertical .sub-col:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* For vertical layout, quality and enhance should be inline */
+        .sub-row.vertical .quality-enhance-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            border-bottom: 1px solid #f3f4f6;
+            padding-bottom: 8px;
+        }
+
+        .sub-row.vertical .quality-enhance-wrapper:last-of-type {
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .sub-col {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .sub-label {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .sub-row select {
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .shortcut-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .shortcut-row {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 12px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .shortcut-row select,
+        .shortcut-row button {
+            margin-right: 12px;
+            margin-bottom: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #10b981;
+            color: white;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #059669;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .equipment-item {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 12px;
+            padding: 4px 0;
+        }
+
+        .comparison-result {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-top: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #e5e7eb;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .current-col {
+            background: #eff6ff;
+        }
+
+        .target-col {
+            background: #f0fdf4;
+        }
+
+        .diff-col {
+            font-weight: 600;
+        }
+
+        .positive {
+            color: #16a34a;
+        }
+
+        .negative {
+            color: #dc2626;
+        }
+
+        .neutral {
+            color: #6b7280;
+        }
+
+        .no-selection {
+            text-align: center;
+            color: #6b7280;
+            padding: 48px 24px;
+            font-size: 16px;
+        }
+
+        /* Fixed Row for secondary attributes */
+        .attr-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .attr-input {
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 13px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .qe-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            /* Added spacing */
+        }
+
+        .confirm-btn {
+            width: 100%;
+            margin-top: 16px;
+            padding: 12px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .confirm-btn:hover {
+            background: #2563eb;
+        }
+
+        .set-summary {
+            background: #f9fafb;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .set-summary p {
+            margin: 4px 0;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .sub-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .sub-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sub-label {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+
+        .sub-col select {
+            font-size: 13px;
+            padding: 6px 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="home.html" class="back-link">← 返回首頁</a>
+    <h1>⚖️ 裝備套裝比較工具</h1>
+
+    <!-- Current Equipment Set -->
+    <h2>1. 選擇裝備（現有）</h2>
+    <div class="selector-card">
+        <div class="slot-grid" id="current-slots"></div>
+    </div>
+
+    <h2>2. 快捷操作（現有）</h2>
+    <div class="shortcut-grid">
+        <div class="shortcut-row">
+            <strong>📦 基本裝備（主/副武器 + 全身防具）</strong><br />
+            等級：<select id="currentBasicLevelSelect">
+                <option value="">-- 選擇等級 --</option>
+            </select>
+            品質：<select id="currentBasicQualitySelect">
+                <option value="0" selected>稀有</option>
+                <option value="1">史詩</option>
+                <option value="2">神話</option>
+                <option value="3">傳奇</option>
+            </select>
+            強化：<select id="currentBasicEnhanceSelect">
+                <option value="0">+0</option>
+            </select>
+            <button id="applyCurrentBasicBtn">📦 套用</button>
+        </div>
+
+        <div class="shortcut-row">
+            <strong>🎁 套裝效果（首飾 + 符文石）</strong><br />
+            套裝：<select id="currentBuffSelect">
+                <option value="">-- 選擇套裝效果 --</option>
+            </select>
+            等級：<select id="currentBuffLevelSelect">
+                <option value="">-- 選擇等級 --</option>
+            </select>
+            品質：<select id="currentBuffQualitySelect">
+                <option value="0" selected>稀有</option>
+                <option value="1">史詩</option>
+                <option value="2">神話</option>
+                <option value="3">傳奇</option>
+            </select>
+            強化：<select id="currentBuffEnhanceSelect">
+                <option value="0">+0</option>
+            </select>
+            <button id="applyCurrentBuffBtn">🎁 套用</button>
+        </div>
+    </div>
+
+    <!-- Target Equipment Set -->
+    <h2>3. 選擇裝備（新的）</h2>
+    <div class="selector-card">
+        <div class="slot-grid" id="target-slots"></div>
+    </div>
+
+    <h2>4. 快捷操作（新的）</h2>
+    <div class="shortcut-grid">
+        <div class="shortcut-row">
+            <strong>📦 基本裝備（主/副武器 + 全身防具）</strong><br />
+            等級：<select id="targetBasicLevelSelect">
+                <option value="">-- 選擇等級 --</option>
+            </select>
+            品質：<select id="targetBasicQualitySelect">
+                <option value="0" selected>稀有</option>
+                <option value="1">史詩</option>
+                <option value="2">神話</option>
+                <option value="3">傳奇</option>
+            </select>
+            強化：<select id="targetBasicEnhanceSelect">
+                <option value="0">+0</option>
+            </select>
+            <button id="applyTargetBasicBtn">📦 套用</button>
+        </div>
+
+        <div class="shortcut-row">
+            <strong>🎁 套裝效果（首飾 + 符文石）</strong><br />
+            套裝：<select id="targetBuffSelect">
+                <option value="">-- 選擇套裝效果 --</option>
+            </select>
+            等級：<select id="targetBuffLevelSelect">
+                <option value="">-- 選擇等級 --</option>
+            </select>
+            品質：<select id="targetBuffQualitySelect">
+                <option value="0" selected>稀有</option>
+                <option value="1">史詩</option>
+                <option value="2">神話</option>
+                <option value="3">傳奇</option>
+            </select>
+            強化：<select id="targetBuffEnhanceSelect">
+                <option value="0">+0</option>
+            </select>
+            <button id="applyTargetBuffBtn">🎁 套用</button>
+        </div>
+    </div>
+
+    <!-- Comparison Result -->
+    <h2>5. 總屬性（比較）</h2>
+    <div class="comparison-result" id="comparison-result">
+        <div class="no-selection">請選擇裝備進行比較</div>
+    </div>
+
+    <script>
+        let equipmentData = [];
+        let itemsByCategory = {};
+        const SLOT_DEFS = [
+            { slotId: "主武器", category: "主武器" },
+            { slotId: "副武器", category: "副武器" },
+            { slotId: "頭盔", category: "頭盔" },
+            { slotId: "上衣", category: "上衣" },
+            { slotId: "下裝", category: "下裝" },
+            { slotId: "鞋子", category: "鞋子" },
+            { slotId: "斗篷", category: "斗篷" },
+            { slotId: "手鍊", category: "手鍊" },
+            { slotId: "項鍊", category: "項鍊" },
+            { slotId: "戒指", category: "戒指" },
+            { slotId: "寶石", category: "寶石" },
+            { slotId: "符文石", category: "符文石" }
+        ];
+
+        const QUALITY_LIST = ["稀有", "史詩", "神話", "傳奇"];
+
+        // Maximum enhancement level by category
+        const MAX_ENHANCE_BY_CATEGORY = {
+            "符文石": 15,
+            "default": 12
+        };
+
+        // Enhancement costs
+        const ENHANCE_COSTS = [
+            3450, 4350, 5400, 6600, 8100, 9900,
+            12000, 14400, 17250, 20700, 24750, 29700,
+            35640, 42768, 51322
+        ];
+
+        // State tracking for both sides
+        let currentSelection = {};
+        let targetSelection = {};
+
+        // Initialize state for all slots
+        function initializeState() {
+            SLOT_DEFS.forEach(def => {
+                currentSelection[def.slotId] = { item: null, qualityIndex: 0, enhanceLevel: 0 };
+                targetSelection[def.slotId] = { item: null, qualityIndex: 0, enhanceLevel: 0 };
+            });
+        }
+
+        // Enhancement calculation
+        function applyEnhance(base, level) {
+            if (!base || base <= 0) return 0;
+            let v = base;
+            for (let i = 0; i < level; i++) v = Math.floor(v * 1.2) + 1;
+            return v;
+        }
+
+        // Initialize - same approach as index.html
+        async function init() {
+            try {
+                const res = await fetch("complete_equipment.json");
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                equipmentData = await res.json();
+                console.log("✅ 載入", equipmentData.length, "個裝備");
+            } catch (err) {
+                console.error("❌ JSON 載入失敗:", err);
+                document.body.innerHTML += `
+                    <div style="color:red;padding:20px;">
+                        載入 complete_equipment.json 失敗: ${err.message}<br>
+                        請確認：<ol>
+                            <li>先執行 Python parser 產生 complete_equipment.json</li>
+                            <li>json 與 compare.html 在同一資料夾</li>
+                            <li>用 HTTP server 開（python -m http.server）</li>
+                        </ol>
+                    </div>`;
+                return;
+            }
+
+            // Build itemsByCategory
+            itemsByCategory = {};
+            for (const it of equipmentData) {
+                if (it && it.category) {
+                    if (!itemsByCategory[it.category]) itemsByCategory[it.category] = [];
+                    itemsByCategory[it.category].push(it);
+                }
+            }
+            for (const cat in itemsByCategory) {
+                itemsByCategory[cat].sort((a, b) => (a.level_required || 0) - (b.level_required || 0));
+            }
+
+            console.log('✅ 分類完成:', Object.keys(itemsByCategory));
+            initializeState();
+            initializeSelectors();
+            initializeShortcuts();
+        }
+
+        function initializeSelectors() {
+            const currentSlotsDiv = document.getElementById('current-slots');
+            const targetSlotsDiv = document.getElementById('target-slots');
+
+            SLOT_DEFS.forEach(def => {
+                const items = itemsByCategory[def.category] || [];
+                const isBasicCat = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"].includes(def.category);
+                const isJewelryCat = ["手鍊", "項鍊", "戒指", "寶石"].includes(def.category);
+                const isSymbolCat = false;
+                const useVerticalLayout = isJewelryCat;
+
+                // Current side
+                const currentDiv = document.createElement('div');
+                currentDiv.className = 'equipment-slot';
+
+                const currentLabel = document.createElement('label');
+                currentLabel.textContent = def.slotId;
+                currentDiv.appendChild(currentLabel);
+
+                // Equipment select
+                const currentSelect = document.createElement('select');
+                currentSelect.className = 'current-category';
+                currentSelect.dataset.slotId = def.slotId;
+                currentSelect.dataset.category = def.category;
+                currentSelect.innerHTML = '<option value="">-- 未選擇 --</option>';
+                items.forEach((item) => {
+                    const opt = document.createElement('option');
+                    opt.value = item.id;
+                    opt.textContent = `${item.name} (Lv.${item.level_required || 0})`;
+                    currentSelect.appendChild(opt);
+                });
+                currentSelect.addEventListener('change', (e) => onEquipChange(e, 'current'));
+                currentDiv.appendChild(currentSelect);
+
+                // Quality and Enhancement row
+                const qeRow = document.createElement('div');
+                qeRow.className = 'qe-row';
+
+                // Quality selector (for basic and jewelry)
+                if (isBasicCat || isJewelryCat || isSymbolCat) {
+                    const qCol = document.createElement('div');
+                    qCol.className = 'sub-col';
+                    const qLbl = document.createElement('span');
+                    qLbl.className = 'sub-label';
+                    qLbl.textContent = '品質';
+                    const qSel = document.createElement('select');
+                    qSel.dataset.slotId = def.slotId;
+                    QUALITY_LIST.forEach((q, i) => {
+                        const opt = document.createElement('option');
+                        opt.value = i;
+                        opt.textContent = q;
+                        qSel.appendChild(opt);
+                    });
+                    qSel.addEventListener('change', (e) => onQualityChange(e, 'current'));
+                    qCol.appendChild(qLbl);
+                    qCol.appendChild(qSel);
+                    qeRow.appendChild(qCol);
+                }
+
+                // Enhancement
+                const eCol = document.createElement('div');
+                eCol.className = 'sub-col';
+                const eLbl = document.createElement('span');
+                eLbl.className = 'sub-label';
+                eLbl.textContent = '強化';
+                const eSel = document.createElement('select');
+                eSel.dataset.slotId = def.slotId;
+                const maxEnhance = MAX_ENHANCE_BY_CATEGORY[def.category] || MAX_ENHANCE_BY_CATEGORY["default"];
+                for (let lv = 0; lv <= maxEnhance; lv++) {
+                    const opt = document.createElement('option');
+                    opt.value = lv;
+                    opt.textContent = `+${lv}`;
+                    eSel.appendChild(opt);
+                }
+                eSel.addEventListener('change', (e) => onEnhanceChange(e, 'current'));
+                eCol.appendChild(eLbl);
+                eCol.appendChild(eSel);
+                qeRow.appendChild(eCol);
+                currentDiv.appendChild(qeRow);
+
+                // Jewelry Sub-rows (Vertical)
+                const currentSubRow = document.createElement('div');
+                currentSubRow.className = 'sub-row';
+                if (useVerticalLayout) {
+                    currentSubRow.classList.add('vertical');
+                }
+
+                // Primary attribute selector (for jewelry)
+                if (isJewelryCat) {
+                    const pCol = document.createElement('div');
+                    pCol.className = 'sub-col';
+                    const pLbl = document.createElement('span');
+                    pLbl.className = 'sub-label';
+                    pLbl.textContent = '主屬性';
+                    const pSel = document.createElement('select');
+                    pSel.id = `current_primary_${def.slotId}`;
+                    pSel.dataset.slotId = def.slotId;
+                    pSel.dataset.attrtype = 'primary';
+                    pSel.innerHTML = '<option value="">-- 選擇 --</option>';
+                    pSel.addEventListener('change', (e) => onAttrChange(e, 'current'));
+                    pCol.appendChild(pLbl);
+                    pCol.appendChild(pSel);
+                    currentSubRow.appendChild(pCol);
+                }
+
+                // Secondary attributes selector (for jewelry) - 3 separate rows
+                if (isJewelryCat) {
+                    for (let i = 0; i < 3; i++) {
+                        const sCol = document.createElement('div');
+                        sCol.className = 'sub-col';
+                        const sLbl = document.createElement('span');
+                        sLbl.className = 'sub-label';
+                        sLbl.textContent = `副屬性 ${i + 1}`;
+
+                        const row = document.createElement('div');
+                        row.className = 'attr-row';
+
+                        const sSel = document.createElement('select');
+                        sSel.id = `current_secondary${i}_${def.slotId}`;
+                        sSel.dataset.slotId = def.slotId;
+                        sSel.dataset.attrtype = 'secondary';
+                        sSel.dataset.secindex = i;
+                        sSel.innerHTML = '<option value="">-- 選擇 --</option>';
+                        sSel.addEventListener('change', (e) => onAttrChange(e, 'current'));
+
+                        // Value Selection Dropdown (from DB)
+                        const sValSel = document.createElement('select');
+                        sValSel.id = `current_secondary_val${i}_${def.slotId}`;
+                        sValSel.dataset.slotId = def.slotId;
+                        sValSel.dataset.secindex = i;
+                        sValSel.dataset.attrtype = 'secondary_val';
+                        sValSel.innerHTML = '<option value="">-- 值 --</option>';
+                        sValSel.addEventListener('change', (e) => onAttrValSelectChange(e, 'current'));
+
+                        const sInp = document.createElement('input');
+                        sInp.type = 'number';
+                        sInp.min = '0';
+                        sInp.placeholder = '額外';
+                        sInp.className = 'attr-input';
+                        sInp.dataset.slotId = def.slotId;
+                        sInp.dataset.secindex = i;
+                        sInp.addEventListener('input', (e) => onExtraValueChange(e, 'current'));
+
+                        row.appendChild(sSel);
+                        row.appendChild(sValSel);
+                        row.appendChild(sInp);
+                        sCol.appendChild(sLbl);
+                        sCol.appendChild(row);
+                        currentSubRow.appendChild(sCol);
+                    }
+                }
+
+                currentDiv.appendChild(currentSubRow);
+
+                // Add confirm button for all categories that need manual values (jewelry)
+                if (isJewelryCat) {
+                    const confirmBtn = document.createElement('button');
+                    confirmBtn.textContent = '確認裝備數值';
+                    confirmBtn.className = 'confirm-btn';
+                    confirmBtn.onclick = () => updateComparison();
+                    currentDiv.appendChild(confirmBtn);
+                }
+
+                currentSlotsDiv.appendChild(currentDiv);
+
+                // Target side - similar structure
+                const targetDiv = document.createElement('div');
+                targetDiv.className = 'equipment-slot';
+
+                const targetLabel = document.createElement('label');
+                targetLabel.textContent = def.slotId;
+                targetDiv.appendChild(targetLabel);
+
+                const targetSelect = document.createElement('select');
+                targetSelect.className = 'target-category';
+                targetSelect.dataset.slotId = def.slotId;
+                targetSelect.dataset.category = def.category;
+                targetSelect.innerHTML = '<option value="">-- 未選擇 --</option>';
+                items.forEach((item) => {
+                    const opt = document.createElement('option');
+                    opt.value = item.id;
+                    opt.textContent = `${item.name} (Lv.${item.level_required || 0})`;
+                    targetSelect.appendChild(opt);
+                });
+                targetSelect.addEventListener('change', (e) => onEquipChange(e, 'target'));
+                targetDiv.appendChild(targetSelect);
+
+                // Target Quality and Enhancement row
+                const tQeRow = document.createElement('div');
+                tQeRow.className = 'qe-row';
+
+                if (isBasicCat || isJewelryCat || isSymbolCat) {
+                    const qCol = document.createElement('div');
+                    qCol.className = 'sub-col';
+                    const qLbl = document.createElement('span');
+                    qLbl.className = 'sub-label';
+                    qLbl.textContent = '品質';
+                    const qSel = document.createElement('select');
+                    qSel.dataset.slotId = def.slotId;
+                    QUALITY_LIST.forEach((q, i) => {
+                        const opt = document.createElement('option');
+                        opt.value = i;
+                        opt.textContent = q;
+                        qSel.appendChild(opt);
+                    });
+                    qSel.addEventListener('change', (e) => onQualityChange(e, 'target'));
+                    qCol.appendChild(qLbl);
+                    qCol.appendChild(qSel);
+                    tQeRow.appendChild(qCol);
+                }
+
+                const tECol = document.createElement('div');
+                tECol.className = 'sub-col';
+                const tELbl = document.createElement('span');
+                tELbl.className = 'sub-label';
+                tELbl.textContent = '強化';
+                const tESel = document.createElement('select');
+                tESel.dataset.slotId = def.slotId;
+                // Side 2/4 (target) only allows up to +12
+                const tMaxEnhance = 12;
+                for (let lv = 0; lv <= tMaxEnhance; lv++) {
+                    const opt = document.createElement('option');
+                    opt.value = lv;
+                    opt.textContent = `+${lv}`;
+                    tESel.appendChild(opt);
+                }
+                tESel.addEventListener('change', (e) => onEnhanceChange(e, 'target'));
+                tECol.appendChild(tELbl);
+                tECol.appendChild(tESel);
+                tQeRow.appendChild(tECol);
+                targetDiv.appendChild(tQeRow);
+
+                const targetSubRow = document.createElement('div');
+                targetSubRow.className = 'sub-row';
+                if (useVerticalLayout) {
+                    targetSubRow.classList.add('vertical');
+                }
+
+                // Primary attribute selector (for jewelry)
+                if (isJewelryCat) {
+                    const pCol = document.createElement('div');
+                    pCol.className = 'sub-col';
+                    const pLbl = document.createElement('span');
+                    pLbl.className = 'sub-label';
+                    pLbl.textContent = '主屬性';
+                    const pSel = document.createElement('select');
+                    pSel.id = `target_primary_${def.slotId}`;
+                    pSel.dataset.slotId = def.slotId;
+                    pSel.dataset.attrtype = 'primary';
+                    pSel.innerHTML = '<option value="">-- 選擇 --</option>';
+                    pSel.addEventListener('change', (e) => onAttrChange(e, 'target'));
+                    pCol.appendChild(pLbl);
+                    pCol.appendChild(pSel);
+                    targetSubRow.appendChild(pCol);
+                }
+
+                // Secondary attributes selector (for jewelry) - 3 separate rows
+                if (isJewelryCat) {
+                    for (let i = 0; i < 3; i++) {
+                        const sCol = document.createElement('div');
+                        sCol.className = 'sub-col';
+                        const sLbl = document.createElement('span');
+                        sLbl.className = 'sub-label';
+                        sLbl.textContent = `副屬性 ${i + 1}`;
+
+                        const row = document.createElement('div');
+                        row.className = 'attr-row';
+
+                        const sSel = document.createElement('select');
+                        sSel.id = `target_secondary${i}_${def.slotId}`;
+                        sSel.dataset.slotId = def.slotId;
+                        sSel.dataset.attrtype = 'secondary';
+                        sSel.dataset.secindex = i;
+                        sSel.innerHTML = '<option value="">-- 選擇 --</option>';
+                        sSel.addEventListener('change', (e) => onAttrChange(e, 'target'));
+
+                        // Value Selection Dropdown (from DB)
+                        const sValSel = document.createElement('select');
+                        sValSel.id = `target_secondary_val${i}_${def.slotId}`;
+                        sValSel.dataset.slotId = def.slotId;
+                        sValSel.dataset.secindex = i;
+                        sValSel.dataset.attrtype = 'secondary_val';
+                        sValSel.innerHTML = '<option value="">-- 值 --</option>';
+                        sValSel.addEventListener('change', (e) => onAttrValSelectChange(e, 'target'));
+
+                        const sInp = document.createElement('input');
+                        sInp.type = 'number';
+                        sInp.min = '0';
+                        sInp.placeholder = '額外';
+                        sInp.className = 'attr-input';
+                        sInp.dataset.slotId = def.slotId;
+                        sInp.dataset.secindex = i;
+                        sInp.addEventListener('input', (e) => onExtraValueChange(e, 'target'));
+
+                        row.appendChild(sSel);
+                        row.appendChild(sValSel);
+                        row.appendChild(sInp);
+                        sCol.appendChild(sLbl);
+                        sCol.appendChild(row);
+                        targetSubRow.appendChild(sCol);
+                    }
+                }
+
+                targetDiv.appendChild(targetSubRow);
+
+                // Add confirm button for all categories that need manual values (jewelry)
+                if (isJewelryCat) {
+                    const confirmBtn = document.createElement('button');
+                    confirmBtn.textContent = '確認裝備數值';
+                    confirmBtn.className = 'confirm-btn';
+                    confirmBtn.onclick = () => updateComparison();
+                    targetDiv.appendChild(confirmBtn);
+                }
+
+                targetSlotsDiv.appendChild(targetDiv);
+            });
+        }
+
+        // Event handlers
+        function onEquipChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const category = e.target.dataset.category;
+            const items = itemsByCategory[category] || [];
+            const itemId = e.target.value;
+            const item = items.find(it => it.id === itemId) || null;
+
+            console.log('Equip changed:', { side, slotId, category, itemId, itemFound: !!item });
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            selection[slotId].item = item;
+
+            // Reset attributes if no item
+            if (!item) {
+                if (selection[slotId].attrs) selection[slotId].attrs = {};
+            }
+
+            // Update attribute selectors using DOM traversal
+            if (["手鍊", "項鍊", "戒指", "寶石"].includes(category)) {
+                updateAttributeSelectors(e.target, item);
+            }
+
+            updateComparison();
+        }
+
+        function updateAttributeSelectors(triggerSelect, item) {
+            const slotDiv = triggerSelect.closest('.equipment-slot');
+            if (!slotDiv) return;
+
+            // Target ONLY selects with data-attrtype in the CURRENT equipment-slot
+            const primarySel = slotDiv.querySelector('select[data-attrtype="primary"]');
+            const secondarySels = slotDiv.querySelectorAll('select[data-attrtype="secondary"]');
+            const secondaryValueSels = slotDiv.querySelectorAll('select[data-attrtype="secondary_val"]');
+
+            console.log('--- ATTR UPDATE ---');
+            console.log('Slot:', triggerSelect.dataset.slotId);
+            console.log('Item:', item ? item.name : 'NULL');
+
+            if (primarySel) {
+                primarySel.innerHTML = '';
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = "";
+                defaultOpt.textContent = "-- 選擇 --";
+                primarySel.appendChild(defaultOpt);
+
+                if (item && item.primary_attrs) {
+                    item.primary_attrs.forEach((attr, idx) => {
+                        const opt = document.createElement('option');
+                        opt.value = idx;
+                        opt.textContent = attr.name;
+                        primarySel.appendChild(opt);
+                    });
+                }
+            }
+
+            secondarySels.forEach((sel, selIdx) => {
+                sel.innerHTML = '';
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = "";
+                defaultOpt.textContent = "-- 選擇 --";
+                sel.appendChild(defaultOpt);
+
+                if (item && item.secondary_attrs) {
+                    item.secondary_attrs.forEach((attr, idx) => {
+                        const opt = document.createElement('option');
+                        opt.value = idx;
+                        opt.textContent = attr.name;
+                        sel.appendChild(opt);
+                    });
+                }
+
+                // Also clear the value dropdowns for this slot
+                if (secondaryValueSels[selIdx]) {
+                    secondaryValueSels[selIdx].innerHTML = '<option value="">-- 值 --</option>';
+                }
+            });
+            console.log('--- UPDATE FINISHED ---');
+        }
+
+        function onAttrChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const attrType = e.target.dataset.attrtype;
+            const secIndex = parseInt(e.target.dataset.secindex, 10);
+            const value = e.target.value;
+            const attrIndex = value === "" ? undefined : parseInt(value, 10);
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            const item = selection[slotId].item;
+
+            if (!selection[slotId].attrs) {
+                selection[slotId].attrs = {};
+            }
+
+            if (attrType === 'secondary' && !isNaN(secIndex)) {
+                if (!selection[slotId].attrs.secondary) {
+                    selection[slotId].attrs.secondary = [undefined, undefined, undefined];
+                }
+                selection[slotId].attrs.secondary[secIndex] = attrIndex;
+
+                // UPDATE THE VALUE DROPDOWN OPTIONS
+                const slotDiv = e.target.closest('.equipment-slot');
+                const valSel = slotDiv.querySelector(`select[data-attrtype="secondary_val"][data-secindex="${secIndex}"]`);
+                const manualInp = slotDiv.querySelector(`input[data-secindex="${secIndex}"]`);
+
+                if (valSel) {
+                    valSel.innerHTML = '<option value="">-- 值 --</option>';
+                    if (item && item.secondary_attrs && attrIndex !== undefined && item.secondary_attrs[attrIndex]) {
+                        const attr = item.secondary_attrs[attrIndex];
+                        attr.values.forEach(v => {
+                            const opt = document.createElement('option');
+                            opt.value = v;
+                            opt.textContent = v;
+                            valSel.appendChild(opt);
+                        });
+                    }
+                }
+
+                // Reset manual input when attribute changes
+                if (manualInp) {
+                    manualInp.value = "";
+                    if (!selection[slotId].attrs.secondaryValues) {
+                        selection[slotId].attrs.secondaryValues = [0, 0, 0];
+                    }
+                    selection[slotId].attrs.secondaryValues[secIndex] = 0;
+                }
+            } else {
+                selection[slotId].attrs[attrType] = attrIndex;
+            }
+        }
+
+        function onAttrValSelectChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const secIndex = parseInt(e.target.dataset.secindex, 10);
+            const val = e.target.value === "" ? 0 : parseInt(e.target.value, 10);
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            if (!selection[slotId].attrs) selection[slotId].attrs = {};
+            if (!selection[slotId].attrs.secondaryValues) {
+                selection[slotId].attrs.secondaryValues = [0, 0, 0];
+            }
+            selection[slotId].attrs.secondaryValues[secIndex] = val;
+            // Removed the code that updated the manual entry box automatically
+        }
+
+        function onExtraValueChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const secIndex = parseInt(e.target.dataset.secindex, 10);
+            const val = e.target.value === "" ? 0 : Math.max(0, parseInt(e.target.value, 10));
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            if (!selection[slotId].attrs) selection[slotId].attrs = {};
+            if (!selection[slotId].attrs.extraValues) {
+                selection[slotId].attrs.extraValues = [0, 0, 0];
+            }
+            selection[slotId].attrs.extraValues[secIndex] = val;
+        }
+
+        function onAttrValueChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const secIndex = parseInt(e.target.dataset.secindex, 10);
+            const val = e.target.value === "" ? 0 : Math.max(0, parseInt(e.target.value, 10));
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            if (!selection[slotId].attrs) selection[slotId].attrs = {};
+            if (!selection[slotId].attrs.secondaryValues) {
+                selection[slotId].attrs.secondaryValues = [0, 0, 0];
+            }
+            selection[slotId].attrs.secondaryValues[secIndex] = val;
+        }
+
+        function onQualityChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const qualityIndex = parseInt(e.target.value, 10);
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            selection[slotId].qualityIndex = qualityIndex;
+
+            // If changing target (2 or 4), also update current (1 or 3)
+            if (side === 'target') {
+                currentSelection[slotId].qualityIndex = qualityIndex;
+                // Update UI for side 1/3
+                // Need a way to find the specific slot. Using [data-slot-id] which is unique per side.
+                const currentSlotsDiv = document.getElementById('current-slots');
+                const qSel = currentSlotsDiv.querySelector(`.qe-row select[data-slot-id="${slotId}"]`);
+                if (qSel) qSel.value = qualityIndex;
+            }
+
+            updateComparison();
+        }
+
+        function onEnhanceChange(e, side) {
+            const slotId = e.target.dataset.slotId;
+            const enhanceLevel = parseInt(e.target.value, 10);
+
+            const selection = side === 'current' ? currentSelection : targetSelection;
+            selection[slotId].enhanceLevel = enhanceLevel;
+
+            // If changing target (2 or 4), also update current (1 or 3)
+            if (side === 'target') {
+                currentSelection[slotId].enhanceLevel = enhanceLevel;
+                // Update UI for side 1/3
+                const currentSlotsDiv = document.getElementById('current-slots');
+                const slotSelects = currentSlotsDiv.querySelectorAll(`.qe-row select[data-slot-id="${slotId}"]`);
+                if (slotSelects.length > 1) {
+                    slotSelects[1].value = enhanceLevel;
+                }
+            }
+
+            updateComparison();
+        }
+
+        function initializeShortcuts() {
+            const mainCats = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"];
+            const mainLevelsSet = new Set();
+            for (const cat of mainCats) {
+                const items = itemsByCategory[cat] || [];
+                for (const it of items) {
+                    mainLevelsSet.add(it.level_required);
+                }
+            }
+            const mainLevels = Array.from(mainLevelsSet).sort((a, b) => a - b);
+
+            // Populate level selects
+            const levelSelects = ['currentBasicLevelSelect', 'targetBasicLevelSelect'];
+            levelSelects.forEach(id => {
+                const sel = document.getElementById(id);
+                mainLevels.forEach(lv => {
+                    const opt = document.createElement('option');
+                    opt.value = lv;
+                    opt.textContent = `Lv. ${lv}`;
+                    sel.appendChild(opt);
+                });
+            });
+
+            // Buff sets
+            const buffSet = new Set();
+            const buffLvSet = new Set();
+            for (const cat in itemsByCategory) {
+                for (const it of itemsByCategory[cat]) {
+                    if (it.buff?.trim()) {
+                        buffSet.add(it.buff.trim());
+                        buffLvSet.add(it.level_required);
+                    }
+                }
+            }
+
+            // Populate buff selects
+            const buffSelects = ['currentBuffSelect', 'targetBuffSelect'];
+            buffSelects.forEach(id => {
+                const sel = document.getElementById(id);
+                Array.from(buffSet).sort().forEach(b => {
+                    const opt = document.createElement('option');
+                    opt.value = b;
+                    opt.textContent = b;
+                    sel.appendChild(opt);
+                });
+            });
+
+            const buffLvSelects = ['currentBuffLevelSelect', 'targetBuffLevelSelect'];
+            buffLvSelects.forEach(id => {
+                const sel = document.getElementById(id);
+                Array.from(buffLvSet).sort((a, b) => a - b).forEach(lv => {
+                    const opt = document.createElement('option');
+                    opt.value = lv;
+                    opt.textContent = `Lv. ${lv}`;
+                    sel.appendChild(opt);
+                });
+            });
+
+            // Populate enhancement selectors for shortcuts
+            const basicEnhanceSelects = ['currentBasicEnhanceSelect', 'targetBasicEnhanceSelect'];
+            basicEnhanceSelects.forEach(id => {
+                const sel = document.getElementById(id);
+                for (let lv = 0; lv <= 12; lv++) {
+                    const opt = document.createElement('option');
+                    opt.value = lv;
+                    opt.textContent = `+${lv}`;
+                    sel.appendChild(opt);
+                }
+            });
+
+            const buffEnhanceSelects = ['currentBuffEnhanceSelect', 'targetBuffEnhanceSelect'];
+            buffEnhanceSelects.forEach(id => {
+                const sel = document.getElementById(id);
+                const side = id.startsWith('current') ? 'current' : 'target';
+                // Side 1/3 (current) allows +15, Side 2/4 (target) allows +12
+                const max = (side === 'current') ? 15 : 12;
+                for (let lv = 0; lv <= max; lv++) {
+                    const opt = document.createElement('option');
+                    opt.value = lv;
+                    opt.textContent = `+${lv}`;
+                    sel.appendChild(opt);
+                }
+            });
+
+            // Button handlers
+            document.getElementById('applyCurrentBasicBtn').onclick = () => applyBasicEquipment('current');
+            document.getElementById('applyTargetBasicBtn').onclick = () => applyBasicEquipment('target');
+            document.getElementById('applyCurrentBuffBtn').onclick = () => applyBuffSet('current');
+            document.getElementById('applyTargetBuffBtn').onclick = () => applyBuffSet('target');
+        }
+
+        function applyBasicEquipment(side) {
+            const levelSel = document.getElementById(`${side}BasicLevelSelect`);
+            const qualitySel = document.getElementById(`${side}BasicQualitySelect`);
+            const enhanceSel = document.getElementById(`${side}BasicEnhanceSelect`);
+            const lv = parseInt(levelSel.value);
+            if (!lv) return alert('請選擇等級');
+
+            const qualityIndex = parseInt(qualitySel.value);
+            const enhanceLevel = parseInt(enhanceSel.value);
+
+            const mainCats = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"];
+            const selection = side === 'current' ? currentSelection : targetSelection;
+
+            mainCats.forEach(cat => {
+                const items = itemsByCategory[cat] || [];
+                const found = items.find(it => it.level_required === lv);
+                if (found) {
+                    const slot = SLOT_DEFS.find(def => def.category === cat);
+                    if (slot) {
+                        // Update selection state with quality and enhancement from shortcuts
+                        selection[slot.slotId].item = found;
+                        selection[slot.slotId].qualityIndex = qualityIndex;
+                        selection[slot.slotId].enhanceLevel = enhanceLevel;
+
+                        // Update UI dropdowns
+                        const equipSel = document.querySelector(`.${side}-category[data-category="${cat}"]`);
+                        if (equipSel) {
+                            equipSel.value = found.id;
+                        }
+
+                        const slotDiv = equipSel?.closest('.equipment-slot');
+                        if (slotDiv) {
+                            const qeRow = slotDiv.querySelector('.qe-row');
+                            if (qeRow) {
+                                const qualityDropdown = qeRow.querySelector('select[data-slot-id]');
+                                if (qualityDropdown) qualityDropdown.value = qualityIndex.toString();
+                                const enhanceDropdown = qeRow.querySelectorAll('select[data-slot-id]')[1];
+                                if (enhanceDropdown) enhanceDropdown.value = enhanceLevel.toString();
+                            }
+                        }
+                    }
+                }
+            });
+            updateComparison();
+        }
+
+        function applyBuffSet(side) {
+            const buffSel = document.getElementById(`${side}BuffSelect`);
+            const buffLvSel = document.getElementById(`${side}BuffLevelSelect`);
+            const qualitySel = document.getElementById(`${side}BuffQualitySelect`);
+            const enhanceSel = document.getElementById(`${side}BuffEnhanceSelect`);
+            const buff = buffSel.value;
+            const lv = parseInt(buffLvSel.value);
+            if (!buff || !lv) return alert('請選擇套裝效果 + 等級');
+
+            const qualityIndex = parseInt(qualitySel.value);
+            const enhanceLevel = parseInt(enhanceSel.value);
+
+            const buffCats = ["手鍊", "項鍊", "戒指", "寶石", "符文石"];
+            const selection = side === 'current' ? currentSelection : targetSelection;
+
+            buffCats.forEach(cat => {
+                const items = itemsByCategory[cat] || [];
+                const found = items.find(it => it.buff === buff && it.level_required === lv);
+                if (found) {
+                    const slot = SLOT_DEFS.find(def => def.category === cat);
+                    if (slot) {
+                        // Update selection state with enhancement from shortcut
+                        selection[slot.slotId].item = found;
+                        selection[slot.slotId].qualityIndex = qualityIndex;
+                        selection[slot.slotId].enhanceLevel = enhanceLevel;
+
+                        // Update UI dropdowns
+                        const equipSel = document.querySelector(`.${side}-category[data-category="${cat}"]`);
+                        if (equipSel) {
+                            equipSel.value = found.id;
+                            // Trigger attribute dropdown update for jewelry
+                            if (["手鍊", "項鍊", "戒指", "寶石"].includes(cat)) {
+                                updateAttributeSelectors(equipSel, found);
+                            }
+                        }
+
+                        const slotDiv = equipSel?.closest('.equipment-slot');
+                        if (slotDiv) {
+                            const qeRow = slotDiv.querySelector('.qe-row');
+                            if (qeRow) {
+                                // For jewelry, index 0 is quality, index 1 is enhancement
+                                // For runestone (符文石), it only has enhancement so it's a bit different
+                                const selects = qeRow.querySelectorAll('select[data-slot-id]');
+                                if (cat === "符文石") {
+                                    if (selects[0]) selects[0].value = enhanceLevel.toString();
+                                } else {
+                                    const qDropdown = selects[0];
+                                    if (qDropdown) qDropdown.value = qualityIndex.toString();
+                                    const enhanceDropdown = selects[1];
+                                    if (enhanceDropdown) enhanceDropdown.value = enhanceLevel.toString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            updateComparison();
+        }
+
+        function updateComparison() {
+            // Gather selected equipment from both sides
+            let currentSet = [];
+            let targetSet = [];
+
+            Object.entries(currentSelection).forEach(([slotId, state]) => {
+                if (state.item) {
+                    const item = {
+                        ...state.item,
+                        qualityIndex: state.qualityIndex,
+                        enhanceLevel: state.enhanceLevel
+                    };
+                    // Add selected attribute indices if available
+                    if (state.attrs) {
+                        if (state.attrs.primary !== undefined) item.selectedPrimaryAttr = state.attrs.primary;
+                        if (state.attrs.secondary !== undefined) {
+                            // Convert array to filtered array (remove undefined entries)
+                            if (Array.isArray(state.attrs.secondary)) {
+                                item.selectedSecondaryAttr = state.attrs.secondary.filter(idx => idx !== undefined);
+                            } else {
+                                item.selectedSecondaryAttr = state.attrs.secondary;
+                            }
+                        }
+                        // Add manual input values if available
+                        if (state.attrs.secondaryValues) {
+                            item.manualSecondaryBaseValues = state.attrs.secondaryValues;
+                        }
+                        if (state.attrs.extraValues) {
+                            item.manualSecondaryExtraValues = state.attrs.extraValues;
+                        }
+                    }
+                    currentSet.push(item);
+                }
+            });
+
+            Object.entries(targetSelection).forEach(([slotId, state]) => {
+                if (state.item) {
+                    const item = {
+                        ...state.item,
+                        qualityIndex: state.qualityIndex,
+                        enhanceLevel: state.enhanceLevel
+                    };
+                    // Add selected attribute indices if available
+                    if (state.attrs) {
+                        if (state.attrs.primary !== undefined) item.selectedPrimaryAttr = state.attrs.primary;
+                        if (state.attrs.secondary !== undefined) {
+                            // Convert array to filtered array (remove undefined entries)
+                            if (Array.isArray(state.attrs.secondary)) {
+                                item.selectedSecondaryAttr = state.attrs.secondary.filter(idx => idx !== undefined);
+                            } else {
+                                item.selectedSecondaryAttr = state.attrs.secondary;
+                            }
+                        }
+                        // Add manual input values if available
+                        if (state.attrs.secondaryValues) {
+                            item.manualSecondaryBaseValues = state.attrs.secondaryValues;
+                        }
+                        if (state.attrs.extraValues) {
+                            item.manualSecondaryExtraValues = state.attrs.extraValues;
+                        }
+                    }
+                    targetSet.push(item);
+                }
+            });
+
+            // Allow comparison even if only one side has equipment selected
+            if (currentSet.length === 0 && targetSet.length === 0) {
+                document.getElementById('comparison-result').innerHTML =
+                    '<div class="no-selection">請選擇裝備進行比較</div>';
+                return;
+            }
+
+            displayComparison(currentSet, targetSet);
+        }
+
+        function displayComparison(currentSet, targetSet) {
+            let html = '';
+
+            // Helper function to format equipment with quality and enhancement
+            function formatEquipmentList(equipSet) {
+                if (equipSet.length === 0) return '(無)';
+                return equipSet.map(e => {
+                    let str = e.name;
+
+                    // Show quality for basic equipment and jewelry
+                    const basicCats = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"];
+                    const jewelryCats = ["手鍊", "項鍊", "戒指", "寶石"];
+
+                    if ((basicCats.includes(e.category) || jewelryCats.includes(e.category)) && e.qualityIndex !== undefined) {
+                        const qName = QUALITY_LIST[e.qualityIndex] || '';
+                        str += ` [${qName}]`;
+                    }
+
+                    // Show enhancement level if > 0
+                    if (e.enhanceLevel > 0) {
+                        str += ` +${e.enhanceLevel}`;
+                    }
+
+                    // Show selected attributes for jewelry
+                    if (jewelryCats.includes(e.category)) {
+                        const attrs = [];
+                        if (e.selectedPrimaryAttr !== undefined && e.primary_attrs && e.primary_attrs[e.selectedPrimaryAttr]) {
+                            attrs.push(e.primary_attrs[e.selectedPrimaryAttr].name);
+                        }
+
+                        // Handle multiple secondary attributes
+                        if (e.selectedSecondaryAttr !== undefined && Array.isArray(e.selectedSecondaryAttr) && e.secondary_attrs) {
+                            e.selectedSecondaryAttr.forEach((secIdx, i) => {
+                                if (secIdx !== undefined && e.secondary_attrs[secIdx]) {
+                                    let attrStr = e.secondary_attrs[secIdx].name;
+                                    // ADD MANUAL VALUE TO DISPLAY IF IT EXISTS
+                                    if (e.manualSecondaryValues && e.manualSecondaryValues[i] > 0) {
+                                        attrStr += `:${e.manualSecondaryValues[i]}`;
+                                    }
+                                    attrs.push(attrStr);
+                                }
+                            });
+                        }
+
+                        if (attrs.length > 0) {
+                            str += ` (${attrs.join(' + ')})`;
+                        }
+                    }
+
+                    return str;
+                }).join(', ');
+            }
+
+            // Current set summary
+            html += '<div class="set-summary">';
+            html += '<p><strong>當前套裝:</strong> ' + formatEquipmentList(currentSet) + '</p>';
+            html += '</div>';
+
+            // Target set summary
+            html += '<div class="set-summary">';
+            html += '<p><strong>目標套裝:</strong> ' + formatEquipmentList(targetSet) + '</p>';
+            html += '</div>';
+
+            // Aggregate stats
+            const currentStats = aggregateStats(currentSet);
+            const targetStats = aggregateStats(targetSet);
+
+            // Stats comparison table
+            html += '<table>';
+            html += '<thead><tr><th>屬性</th><th class="current-col">當前</th><th class="target-col">目標</th><th class="diff-col">差異</th></tr></thead>';
+            html += '<tbody>';
+
+            const allStats = new Set();
+            Object.keys(currentStats).forEach(stat => allStats.add(stat));
+            Object.keys(targetStats).forEach(stat => allStats.add(stat));
+
+            allStats.forEach(stat => {
+                const currentVal = currentStats[stat] || 0;
+                const targetVal = targetStats[stat] || 0;
+
+                let diff = targetVal - currentVal;
+                let diffClass = diff > 0 ? 'positive' : diff < 0 ? 'negative' : 'neutral';
+                let diffDisplay = diff > 0 ? `+${diff}` : diff === 0 ? '0' : diff;
+
+                html += `<tr>
+                    <td>${stat.replace('_vals', '')}</td>
+                    <td class="current-col">${currentVal}</td>
+                    <td class="target-col">${targetVal}</td>
+                    <td class="diff-col ${diffClass}">${diffDisplay}</td>
+                </tr>`;
+            });
+
+            html += '</tbody></table>';
+
+            document.getElementById('comparison-result').innerHTML = html;
+        }
+
+        function aggregateStats(equipmentSet) {
+            const stats = {};
+
+            equipmentSet.forEach(equip => {
+                const qualityIndex = equip.qualityIndex || 0;
+                const enhanceLevel = equip.enhanceLevel || 0;
+
+                // Handle primary attributes (jewelry)
+                if (equip.primary_attrs && Array.isArray(equip.primary_attrs)) {
+                    const primaryAttrIdx = equip.selectedPrimaryAttr;
+                    if (primaryAttrIdx !== undefined && equip.primary_attrs[primaryAttrIdx]) {
+                        const attr = equip.primary_attrs[primaryAttrIdx];
+                        const baseVal = attr.values[qualityIndex] || attr.values[attr.values.length - 1] || 0;
+                        const enhancedVal = applyEnhance(baseVal, enhanceLevel);
+                        stats[attr.name] = (stats[attr.name] || 0) + enhancedVal;
+                    }
+                }
+
+                // Handle secondary attributes (jewelry) - now supports multiple
+                if (equip.secondary_attrs && Array.isArray(equip.secondary_attrs)) {
+                    // Selection indices for attributes
+                    const selectionIndices = Array.isArray(equip.selectedSecondaryAttr)
+                        ? equip.selectedSecondaryAttr
+                        : (equip.selectedSecondaryAttr !== undefined ? [equip.selectedSecondaryAttr] : []);
+
+                    selectionIndices.forEach((secondaryAttrIdx, localIdx) => {
+                        if (secondaryAttrIdx !== undefined && equip.secondary_attrs[secondaryAttrIdx]) {
+                            const attr = equip.secondary_attrs[secondaryAttrIdx];
+
+                            // Final value = (Selected Base Value OR DB Quality Value) + (Extra Manual Value)
+                            let baseVal = 0;
+                            if (equip.manualSecondaryBaseValues && equip.manualSecondaryBaseValues[localIdx] > 0) {
+                                baseVal = equip.manualSecondaryBaseValues[localIdx];
+                            } else {
+                                baseVal = attr.values[qualityIndex] || attr.values[attr.values.length - 1] || 0;
+                            }
+
+                            let extraVal = 0;
+                            if (equip.manualSecondaryExtraValues && equip.manualSecondaryExtraValues[localIdx] > 0) {
+                                extraVal = equip.manualSecondaryExtraValues[localIdx];
+                            }
+
+                            stats[attr.name] = (stats[attr.name] || 0) + baseVal + extraVal;
+                        }
+                    });
+                }
+
+                Object.entries(equip.stats || {}).forEach(([statName, statValue]) => {
+                    // Handle _vals arrays (from basic.txt) - use selected quality
+                    if (Array.isArray(statValue)) {
+                        const baseVal = statValue[qualityIndex] || statValue[statValue.length - 1] || 0;
+                        const enhancedVal = applyEnhance(baseVal, enhanceLevel);
+                        const baseName = statName.replace('_vals', '');
+                        stats[baseName] = (stats[baseName] || 0) + enhancedVal;
+                    }
+                    // Handle _min and _max values (from other txt files)
+                    else if (statName.endsWith('_min')) {
+                        const baseName = statName.replace('_min', '');
+                        const enhancedVal = applyEnhance(statValue, enhanceLevel);
+                        if (!stats[baseName]) stats[baseName] = 0;
+                        stats[baseName] += enhancedVal;
+                    }
+                    else if (statName.endsWith('_max')) {
+                        // Ignored for comparison (using min values)
+                    }
+                    // Handle direct numeric values
+                    else if (typeof statValue === 'number') {
+                        const enhancedVal = applyEnhance(statValue, enhanceLevel);
+                        stats[statName] = (stats[statName] || 0) + enhancedVal;
+                    }
+                });
+            });
+
+            return stats;
+        }
+
+        function getNumericValue(val) {
+            if (val === null || val === undefined) return 0;
+            if (Array.isArray(val)) return val[3] || val[val.length - 1] || 0;
+            return typeof val === 'number' ? val : 0;
+        }
+
+        // Initialize
+        init();
+    </script>
+</body>
+
+</html>
