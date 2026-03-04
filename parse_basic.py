@@ -17,9 +17,12 @@ def parse_item(lines, file_name, category):
         "buff": "",
         "job_required": "",
         "resources": [],
-        "primary_attrs": [],  # Store all primary attributes
-        "secondary_attrs": []
+        "primary_attrs": [],
+        "secondary_attrs": [],
+        "enhance_costs": {}  # 新增：強化費用
     }
+
+    QUALITY_KEYWORDS = {"稀有", "史詩", "神話", "傳奇"}
 
     for line in lines[1:]:
         line = line.strip()
@@ -35,6 +38,26 @@ def parse_item(lines, file_name, category):
                 item["level_required"] = int(line.split(":", 1)[1].strip())
             except ValueError:
                 pass
+            continue
+
+        # 新增：解析品質強化費用行
+        is_quality_cost = False
+        for q_key in QUALITY_KEYWORDS:
+            if line.startswith(f"{q_key}:"):
+                raw_costs = line.split(":", 1)[1].strip()
+                # 處理 Tab 或 逗號分隔
+                parts = re.split(r'[\t,]+', raw_costs)
+                costs = []
+                for p in parts:
+                    try:
+                        costs.append(int(p.strip()))
+                    except ValueError:
+                        pass
+                if costs:
+                    item["enhance_costs"][q_key] = costs
+                is_quality_cost = True
+                break
+        if is_quality_cost:
             continue
 
         if "套裝效果:" in line:
@@ -142,10 +165,12 @@ def parse_basic_item(lines, file_name, category):
         "stats": {},
         "buff": "",
         "job_required": "",
-        "resources": []
+        "resources": [],
+        "enhance_costs": {}  # 品質對應的強化費用序列
     }
 
     STAT_KEYWORDS = {"攻擊力", "血量", "防禦力"}
+    QUALITY_KEYWORDS = {"稀有", "史詩", "神話", "傳奇"}
 
     for line in lines[1:]:
         line = line.strip()
@@ -161,6 +186,18 @@ def parse_basic_item(lines, file_name, category):
                 item["level_required"] = int(line.split(":", 1)[1].strip())
             except ValueError:
                 pass
+            continue
+
+        # 品質強化費用行：稀有:12000, 14700, ...
+        is_quality_cost = False
+        for q_key in QUALITY_KEYWORDS:
+            if line.startswith(f"{q_key}:"):
+                raw_costs = line.split(":", 1)[1].strip()
+                costs = [int(c.strip()) for c in raw_costs.split(",")]
+                item["enhance_costs"][q_key] = costs
+                is_quality_cost = True
+                break
+        if is_quality_cost:
             continue
 
         # 4 段品質數值行：攻擊力:4,6,8,10

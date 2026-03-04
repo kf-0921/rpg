@@ -3,735 +3,98 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG 工具首頁</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             padding: 24px;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             background: #f9fafb;
-        }
-
-        .back-link:hover {
-            background: #d1d5db !important;
         }
 
         h1 {
             color: #1f2937;
             text-align: center;
+            margin-bottom: 48px;
         }
 
-        h2 {
-            color: #374151;
-            margin-top: 32px;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 8px;
-        }
-
-        .slot-grid {
+        .page-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
         }
 
-        .slot {
+        .page-card {
             background: white;
             border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 16px;
+            border-radius: 12px;
+            padding: 32px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
             display: block;
-            margin-bottom: 8px;
-            color: #374151;
         }
 
-        select {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            font-size: 14px;
-            background: white;
-            box-sizing: border-box;
-        }
-
-        select:focus {
-            outline: none;
+        .page-card:hover {
             border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+            transform: translateY(-2px);
         }
 
-        .sub-row {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
+        .page-card h2 {
+            color: #1f2937;
+            margin: 0 0 12px 0;
+            font-size: 24px;
         }
 
-        .sub-col {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .sub-label {
-            display: block;
-            font-size: 11px;
-            font-weight: 700;
+        .page-card p {
             color: #6b7280;
-            margin-bottom: 4px;
+            margin: 0;
+            line-height: 1.6;
         }
 
-        table {
-            border-collapse: collapse;
-            margin-top: 16px;
-            width: 100%;
-            max-width: 800px;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
+        .page-card.coming-soon {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .page-card.coming-soon:hover {
+            border-color: #e5e7eb;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transform: none;
         }
 
-        th,
-        td {
-            border: 1px solid #e5e7eb;
-            padding: 12px 16px;
-            text-align: left;
-        }
-
-        th {
-            background: #f3f4f6;
+        .badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #78350f;
+            font-size: 12px;
             font-weight: 600;
-            color: #374151;
-        }
-
-        tr:nth-child(even) {
-            background: #fafbfc;
-        }
-
-        .shortcut-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .shortcut-row {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin: 12px 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .shortcut-row select,
-        .shortcut-row button {
-            margin-right: 12px;
-            margin-bottom: 8px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        button:hover {
-            transform: translateY(-1px);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        #resetBtn {
-            background: #ef4444;
-            color: white;
-            font-weight: 600;
-        }
-
-        #resetBtn:hover {
-            background: #dc2626;
-        }
-
-        #applyBasicBtn,
-        #applyBuffBtn {
-            background: #10b981;
-            color: white;
-            font-weight: 600;
-        }
-
-        #applyBasicBtn:hover,
-        #applyBuffBtn:hover {
-            background: #059669;
-        }
-
-        pre {
-            background: #1f2937;
-            color: #e5e7eb;
-            padding: 16px;
-            border-radius: 8px;
-            overflow-x: auto;
-            font-size: 13px;
-            white-space: pre-wrap;
-        }
-
-        .empty-state {
-            color: #9ca3af;
-            font-style: italic;
-        }
-
-        .cost-row td {
-            color: #d97706;
-            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-left: 8px;
         }
     </style>
 </head>
 
 <body>
-    <a href="home.html" class="back-link"
-        style="display:inline-block;margin-bottom:24px;padding:8px 16px;background:#e5e7eb;color:#1f2937;text-decoration:none;border-radius:6px;font-weight:600;transition:background 0.3s ease;">←
-        返回首頁</a>
-    <h1>🛡️ 裝備配置模擬器</h1>
-    <p style="text-align:center; color:#6b7280;">
-        載入自 <code>complete_equipment.json</code> | 支援 11 格裝備配置 + 品質 + 強化
-    </p>
+    <h1>🎮 RPG 工具集</h1>
 
-    <h2>1. 選擇裝備</h2>
-    <div class="slot-grid" id="slotContainer"></div>
+    <div class="page-grid">
+        <a href="resource.html" class="page-card">
+            <h2>💎 資源需求計算器</h2>
+            <p>模擬角色裝備配置（主/副武器、防具、首飾及寶石），並自動計算製作及強化所需的所有素材總量與金幣花費。讓你輕鬆規劃遊戲資源分配。</p>
+        </a>
 
-    <h2>2. 快捷操作</h2>
-    <div class="shortcut-grid">
-        <div class="shortcut-row">
-            <strong>📦 基本裝備（主/副武器 + 全身防具）</strong><br />
-            等級：<select id="basicLevelSelect">
-                <option value="">-- 選擇等級 --</option>
-            </select>
-            品質：<select id="basicQualitySelect">
-                <option value="0">稀有</option>
-                <option value="1">史詩</option>
-                <option value="2">神話</option>
-                <option value="3" selected>傳奇</option>
-            </select>
-            強化：<select id="basicEnhanceSelect">
-                <option value="0">+0</option>
-            </select>
-            <button id="applyBasicBtn">📦 套用</button>
-        </div>
-
-        <div class="shortcut-row">
-            <strong>🎁 套裝效果（首飾 + 符文石）</strong><br />
-            套裝：<select id="buffSelect">
-                <option value="">-- 選擇套裝效果 --</option>
-            </select>
-            等級：<select id="buffLevelSelect">
-                <option value="">-- 選擇等級 --</option>
-            </select>
-            強化：<select id="buffEnhanceSelect">
-                <option value="0">+0</option>
-            </select>
-            <button id="applyBuffBtn">🎁 套用</button>
-        </div>
+        <a href="compare.html" class="page-card">
+            <h2>⚖️ 裝備比較工具</h2>
+            <p>比較兩件裝備的屬性差異,包含攻擊力、防禦力等數值對比,以及所需資源分析。幫助你做出更明智的升級決策。</p>
+        </a>
     </div>
-
-    <div class="shortcut-row">
-        <button id="resetBtn">🔄 重設全部裝備</button>
-    </div>
-
-    <h2>3. 總屬性</h2>
-    <table id="statTable">
-        <thead>
-            <tr>
-                <th>屬性</th>
-                <th>總 Min</th>
-                <th>總 Max</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <h2>4. 所需素材總量</h2>
-    <table id="resTable">
-        <thead>
-            <tr>
-                <th>素材名稱</th>
-                <th>總數量</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <h2>5. 目前已選裝備（除錯用）</h2>
-    <pre id="debugSelected">載入中...</pre>
-
-    <script>
-        // ---- 常數 ----
-        const SLOT_DEFS = [
-            { slotId: "主武器", label: "主武器", category: "主武器" },
-            { slotId: "副武器", label: "副武器", category: "副武器" },
-            { slotId: "頭盔", label: "頭盔", category: "頭盔" },
-            { slotId: "上衣", label: "上衣", category: "上衣" },
-            { slotId: "下裝", label: "下裝", category: "下裝" },
-            { slotId: "鞋子", label: "鞋子", category: "鞋子" },
-            { slotId: "斗篷", label: "斗篷", category: "斗篷" },
-            { slotId: "手鍊", label: "手鍊", category: "手鍊" },
-            { slotId: "項鍊", label: "項鍊", category: "項鍊" },
-            { slotId: "戒指", label: "戒指", category: "戒指" },
-            { slotId: "寶石", label: "寶石", category: "寶石" },
-            { slotId: "符文石", label: "符文石", category: "符文石" }
-        ];
-
-        const QUALITY_LIST = ["稀有", "史詩", "神話", "傳奇"];
-
-        // Maximum enhancement level by category
-        const MAX_ENHANCE_BY_CATEGORY = {
-            "符文石": 15,
-            "default": 12  // All other equipment types
-        };
-
-        // Enhancement costs: +0→+1, +1→+2, ..., +14→+15
-        const ENHANCE_COSTS = [
-            3450, 4350, 5400, 6600, 8100, 9900,
-            12000, 14400, 17250, 20700, 24750, 29700,
-            35640, 42768, 51322
-        ];
-
-        let allItems = [];
-        let itemsByCategory = {};
-        // selectedBySlot[slotId] = { item: obj|null, qualityIndex: 0-3, enhanceLevel: 0-12 }
-        let selectedBySlot = {};
-
-        // ---- 強化計算 ----
-        function applyEnhance(base, level) {
-            if (!base || base <= 0) return 0;
-            let v = base;
-            for (let i = 0; i < level; i++) v = Math.floor(v * 1.2) + 1;
-            return v;
-        }
-
-        function calcEnhanceCost(level) {
-            let total = 0;
-            for (let i = 0; i < level; i++) total += (ENHANCE_COSTS[i] || 0);
-            return total;
-        }
-
-        // ---- state helpers ----
-        function getState(slotId) {
-            return selectedBySlot[slotId] || { item: null, qualityIndex: 0, enhanceLevel: 0 };
-        }
-        function setState(slotId, updates) {
-            selectedBySlot[slotId] = { ...getState(slotId), ...updates };
-        }
-
-        // ---- 取屬性值（支援 _vals 陣列 & 舊 _min/_max 格式）----
-        function getStatVal(stats, statName, qualityIndex) {
-            // basic.txt 格式：攻擊力_vals = [4,6,8,10]
-            const valsKey = `${statName}_vals`;
-            if (Array.isArray(stats[valsKey])) {
-                return stats[valsKey][qualityIndex] ?? 0;
-            }
-            // 其他 txt 格式：攻擊力_min / 攻擊力_max
-            return null; // 交由呼叫方處理
-        }
-
-        // ---- 初始化 ----
-        async function init() {
-            try {
-                const res = await fetch("complete_equipment.json");
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                allItems = await res.json();
-                console.log("✅ 載入", allItems.length, "個裝備");
-            } catch (err) {
-                console.error("❌ JSON 載入失敗:", err);
-                document.body.innerHTML += `
-          <div style="color:red;padding:20px;">
-            載入 complete_equipment.json 失敗: ${err.message}<br>
-            請確認：<ol>
-              <li>先執行 Python parser 產生 complete_equipment.json</li>
-              <li>json 與 index.html 在同一資料夾</li>
-              <li>用 HTTP server 開（python -m http.server）</li>
-            </ol>
-          </div>`;
-                return;
-            }
-
-            itemsByCategory = {};
-            for (const it of allItems) {
-                if (!itemsByCategory[it.category]) itemsByCategory[it.category] = [];
-                itemsByCategory[it.category].push(it);
-            }
-            for (const cat in itemsByCategory) {
-                itemsByCategory[cat].sort((a, b) => (a.level_required || 0) - (b.level_required || 0));
-            }
-
-            buildSlotSelectors();
-            buildShortcuts();
-            recalc();
-        }
-
-        // ---- 產生裝備欄位（含品質 + 強化）----
-        function buildSlotSelectors() {
-            const container = document.getElementById("slotContainer");
-            container.innerHTML = "";
-            selectedBySlot = {};
-
-            for (const def of SLOT_DEFS) {
-                const div = document.createElement("div");
-                div.className = "slot";
-
-                // 部位 label
-                const lbl = document.createElement("label");
-                lbl.textContent = def.label;
-                div.appendChild(lbl);
-
-                // 裝備選擇
-                const sel = document.createElement("select");
-                sel.id = "select_" + def.slotId;
-                sel.dataset.slotId = def.slotId;
-                const emptyOpt = document.createElement("option");
-                emptyOpt.value = "";
-                emptyOpt.textContent = "-- 不裝備 --";
-                sel.appendChild(emptyOpt);
-                for (const it of (itemsByCategory[def.category] || [])) {
-                    const opt = document.createElement("option");
-                    opt.value = it.id;
-                    opt.textContent = `${it.name} (${it.id} / Lv.${it.level_required || 0})`;
-                    sel.appendChild(opt);
-                }
-                sel.addEventListener("change", onEquipChange);
-                div.appendChild(sel);
-
-                // 品質 + 強化 sub-row（只有基本裝備類別才顯示品質）
-                const isBasicCat = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"].includes(def.category);
-                const subRow = document.createElement("div");
-                subRow.className = "sub-row";
-
-                if (isBasicCat) {
-                    // 品質 col
-                    const qCol = document.createElement("div");
-                    qCol.className = "sub-col";
-                    const qLbl = document.createElement("span");
-                    qLbl.className = "sub-label";
-                    qLbl.textContent = "品質";
-                    const qSel = document.createElement("select");
-                    qSel.id = "quality_" + def.slotId;
-                    qSel.dataset.slotId = def.slotId;
-                    QUALITY_LIST.forEach((q, i) => {
-                        const opt = document.createElement("option");
-                        opt.value = i;
-                        opt.textContent = q;
-                        qSel.appendChild(opt);
-                    });
-                    qSel.addEventListener("change", onQualityChange);
-                    qCol.appendChild(qLbl);
-                    qCol.appendChild(qSel);
-                    subRow.appendChild(qCol);
-                }
-
-                // 強化 col（所有欄位都有）
-                const eCol = document.createElement("div");
-                eCol.className = "sub-col";
-                const eLbl = document.createElement("span");
-                eLbl.className = "sub-label";
-                eLbl.textContent = "強化";
-                const eSel = document.createElement("select");
-                eSel.id = "enhance_" + def.slotId;
-                eSel.dataset.slotId = def.slotId;
-                // Get max enhancement level for this category
-                const maxEnhance = MAX_ENHANCE_BY_CATEGORY[def.category] || MAX_ENHANCE_BY_CATEGORY["default"];
-                for (let lv = 0; lv <= maxEnhance; lv++) {
-                    const opt = document.createElement("option");
-                    opt.value = lv;
-                    opt.textContent = `+${lv}`;
-                    eSel.appendChild(opt);
-                }
-                eSel.addEventListener("change", onEnhanceChange);
-                eCol.appendChild(eLbl);
-                eCol.appendChild(eSel);
-                subRow.appendChild(eCol);
-
-                div.appendChild(subRow);
-                container.appendChild(div);
-
-                selectedBySlot[def.slotId] = { item: null, qualityIndex: 0, enhanceLevel: 0 };
-            }
-        }
-
-        // ---- 事件 ----
-        function onEquipChange(e) {
-            const slotId = e.target.dataset.slotId;
-            const def = SLOT_DEFS.find(d => d.slotId === slotId);
-            const catItems = itemsByCategory[def.category] || [];
-            const item = catItems.find(it => it.id === e.target.value) || null;
-            setState(slotId, { item });
-            recalc();
-        }
-
-        function onQualityChange(e) {
-            setState(e.target.dataset.slotId, { qualityIndex: parseInt(e.target.value, 10) });
-            recalc();
-        }
-
-        function onEnhanceChange(e) {
-            setState(e.target.dataset.slotId, { enhanceLevel: parseInt(e.target.value, 10) });
-            recalc();
-        }
-
-        // ---- 快捷功能 ----
-        function buildShortcuts() {
-            const mainCats = ["主武器", "副武器", "頭盔", "上衣", "下裝", "鞋子"];
-            const mainLevelsSet = new Set();
-            for (const cat of mainCats) {
-                for (const it of (itemsByCategory[cat] || [])) mainLevelsSet.add(it.level_required);
-            }
-            const mainLevels = Array.from(mainLevelsSet).sort((a, b) => a - b);
-
-            const levelSel = document.getElementById("basicLevelSelect");
-            for (const lv of mainLevels) {
-                const opt = document.createElement("option");
-                opt.value = lv;
-                opt.textContent = `Lv. ${lv}`;
-                levelSel.appendChild(opt);
-            }
-
-            // Populate enhancement options for basic equipment shortcut
-            const basicEnhanceSel = document.getElementById("basicEnhanceSelect");
-            for (let lv = 1; lv <= 12; lv++) {
-                const opt = document.createElement("option");
-                opt.value = lv;
-                opt.textContent = `+${lv}`;
-                basicEnhanceSel.appendChild(opt);
-            }
-
-            document.getElementById("applyBasicBtn").onclick = () => {
-                const lv = parseInt(levelSel.value);
-                if (!lv) return alert("請選擇等級");
-
-                const qualitySel = document.getElementById("basicQualitySelect");
-                const enhanceSel = document.getElementById("basicEnhanceSelect");
-                const qualityIndex = parseInt(qualitySel.value);
-                const enhanceLevel = parseInt(enhanceSel.value);
-
-                for (const slot of SLOT_DEFS) {
-                    if (!mainCats.includes(slot.category)) continue;
-                    const found = (itemsByCategory[slot.category] || []).find(it => it.level_required === lv);
-                    if (found) {
-                        document.getElementById("select_" + slot.slotId).value = found.id;
-                        setState(slot.slotId, { item: found });
-                        // Set quality and enhancement from shortcuts
-                        const qEl = document.getElementById("quality_" + slot.slotId);
-                        const eEl = document.getElementById("enhance_" + slot.slotId);
-                        if (qEl) qEl.value = qualityIndex.toString();
-                        if (eEl) eEl.value = enhanceLevel.toString();
-                        setState(slot.slotId, { qualityIndex, enhanceLevel });
-                    }
-                }
-                recalc();
-            };
-
-            // 套裝效果
-            const buffSet = new Set();
-            const buffLvSet = new Set();
-            for (const it of allItems) {
-                if (it.buff?.trim()) {
-                    buffSet.add(it.buff.trim());
-                    buffLvSet.add(it.level_required);
-                }
-            }
-
-            const buffSel = document.getElementById("buffSelect");
-            for (const b of Array.from(buffSet).sort()) {
-                const opt = document.createElement("option");
-                opt.value = b; opt.textContent = b;
-                buffSel.appendChild(opt);
-            }
-
-            const buffLvSel = document.getElementById("buffLevelSelect");
-            for (const lv of Array.from(buffLvSet).sort((a, b) => a - b)) {
-                const opt = document.createElement("option");
-                opt.value = lv; opt.textContent = `Lv. ${lv}`;
-                buffLvSel.appendChild(opt);
-            }
-
-            // Populate enhancement options for buff set shortcut
-            const buffEnhanceSel = document.getElementById("buffEnhanceSelect");
-            for (let lv = 1; lv <= 15; lv++) {
-                const opt = document.createElement("option");
-                opt.value = lv;
-                opt.textContent = `+${lv}`;
-                buffEnhanceSel.appendChild(opt);
-            }
-
-            document.getElementById("applyBuffBtn").onclick = () => {
-                const buff = buffSel.value;
-                const lv = parseInt(buffLvSel.value);
-                if (!buff || !lv) return alert("請選擇套裝效果 + 等級");
-
-                const enhanceSel = document.getElementById("buffEnhanceSelect");
-                const enhanceLevel = parseInt(enhanceSel.value);
-
-                const buffCats = ["手鍊", "項鍊", "戒指", "寶石", "符文石"];
-                for (const slot of SLOT_DEFS) {
-                    if (!buffCats.includes(slot.category)) continue;
-                    const found = (itemsByCategory[slot.category] || [])
-                        .find(it => it.buff === buff && it.level_required === lv);
-                    if (found) {
-                        document.getElementById("select_" + slot.slotId).value = found.id;
-                        setState(slot.slotId, { item: found });
-                        // Set enhancement from shortcut
-                        const eEl = document.getElementById("enhance_" + slot.slotId);
-                        if (eEl) eEl.value = enhanceLevel.toString();
-                        setState(slot.slotId, { enhanceLevel });
-                    }
-                }
-                recalc();
-            };
-
-            // Reset
-            document.getElementById("resetBtn").onclick = () => {
-                for (const def of SLOT_DEFS) {
-                    const selEl = document.getElementById("select_" + def.slotId);
-                    const qEl = document.getElementById("quality_" + def.slotId);
-                    const eEl = document.getElementById("enhance_" + def.slotId);
-                    if (selEl) selEl.value = "";
-                    if (qEl) qEl.value = "0";
-                    if (eEl) eEl.value = "0";
-                    selectedBySlot[def.slotId] = { item: null, qualityIndex: 0, enhanceLevel: 0 };
-                }
-                document.getElementById("basicLevelSelect").value = "";
-                document.getElementById("buffSelect").value = "";
-                document.getElementById("buffLevelSelect").value = "";
-                recalc();
-            };
-        }
-
-        // ---- 重算 ----
-        function recalc() {
-            const equippedStates = Object.entries(selectedBySlot)
-                .filter(([, st]) => st.item)
-                .map(([slotId, st]) => ({ slotId, ...st }));
-
-            const statAgg = {};   // { "攻擊力": { min, max }, ... }
-            const resAgg = {};   // { "原木": 20, ... }
-            let totalEnhanceCost = 0;
-
-            for (const st of equippedStates) {
-                const { item, qualityIndex: q, enhanceLevel: e } = st;
-                const stats = item.stats || {};
-
-                // ── basic.txt 裝備（有 _vals 陣列）──
-                const statNames = ["攻擊力", "血量", "防禦力"];
-                for (const sName of statNames) {
-                    const valsKey = `${sName}_vals`;
-                    if (Array.isArray(stats[valsKey])) {
-                        const base = stats[valsKey][q] ?? 0;
-                        const final = applyEnhance(base, e);
-                        if (final > 0) {
-                            if (!statAgg[sName]) statAgg[sName] = { min: 0, max: 0 };
-                            statAgg[sName].min += final;
-                            statAgg[sName].max += final;
-                        }
-                    }
-                }
-
-                // ── 其他 txt 裝備（有 _min / _max）──
-                for (const key in stats) {
-                    const mMin = key.match(/^(.+)_min$/);
-                    const mMax = key.match(/^(.+)_max$/);
-                    if (mMin) {
-                        const base = mMin[1];
-                        // 跳過已由 _vals 處理的屬性
-                        if (Array.isArray(stats[`${base}_vals`])) continue;
-                        if (!statAgg[base]) statAgg[base] = { min: 0, max: 0 };
-                        const final = applyEnhance(stats[key], e);
-                        statAgg[base].min += final;
-                    } else if (mMax) {
-                        const base = mMax[1];
-                        if (Array.isArray(stats[`${base}_vals`])) continue;
-                        if (!statAgg[base]) statAgg[base] = { min: 0, max: 0 };
-                        const final = applyEnhance(stats[key], e);
-                        statAgg[base].max += final;
-                    }
-                }
-
-                // 素材
-                for (const r of (item.resources || [])) {
-                    if (!resAgg[r.name]) resAgg[r.name] = 0;
-                    resAgg[r.name] += r.amount;
-                }
-
-                // 強化費用
-                totalEnhanceCost += calcEnhanceCost(e);
-            }
-
-            // ── 更新屬性表 ──
-            const statBody = document.querySelector("#statTable tbody");
-            statBody.innerHTML = "";
-            if (equippedStates.length === 0 || Object.keys(statAgg).length === 0) {
-                statBody.innerHTML = `<tr><td colspan="3" class="empty-state">未選擇任何裝備或無屬性資料</td></tr>`;
-            } else {
-                for (const base of Object.keys(statAgg).sort()) {
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = `
-            <td>${base}</td>
-            <td>${statAgg[base].min}</td>
-            <td>${statAgg[base].max}</td>`;
-                    statBody.appendChild(tr);
-                }
-            }
-
-            // ── 更新素材表 ──
-            const resBody = document.querySelector("#resTable tbody");
-            resBody.innerHTML = "";
-            if (Object.keys(resAgg).length === 0 && totalEnhanceCost === 0) {
-                resBody.innerHTML = `<tr><td colspan="2" class="empty-state">未選擇任何裝備</td></tr>`;
-            } else {
-                // 素材按名稱排序，強化費用排最後
-                const resKeys = Object.keys(resAgg).sort((a, b) => a.localeCompare(b, "zh-Hant"));
-                for (const name of resKeys) {
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = `<td>${name}</td><td>${resAgg[name]}</td>`;
-                    resBody.appendChild(tr);
-                }
-                // 強化費用單獨一行
-                if (totalEnhanceCost > 0) {
-                    const tr = document.createElement("tr");
-                    tr.className = "cost-row";
-                    tr.innerHTML = `<td>💰 強化費用（棒棒糖）</td><td>${totalEnhanceCost.toLocaleString()}</td>`;
-                    resBody.appendChild(tr);
-                }
-            }
-
-            // ── 更新除錯區 ──
-            const dbg = document.getElementById("debugSelected");
-            if (equippedStates.length === 0) {
-                dbg.textContent = "無裝備（已重設）";
-                dbg.style.color = "#9ca3af";
-            } else {
-                const out = equippedStates.map(st => ({
-                    slot: st.slotId,
-                    id: st.item.id,
-                    name: st.item.name,
-                    level: st.item.level_required || 0,
-                    quality: QUALITY_LIST[Math.min(3, st.qualityIndex || 0)],
-                    enhance: `+${st.enhanceLevel || 0}`,
-                    enhance_cost: calcEnhanceCost(st.enhanceLevel || 0)
-                }));
-                dbg.textContent = JSON.stringify(out, null, 2);
-                dbg.style.color = "#e5e7eb";
-            }
-        }
-
-        // ---- 啟動 ----
-        init();
-    </script>
 </body>
 
 </html>
