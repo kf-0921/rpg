@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素材反查工具</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            padding: 24px;
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #f9fafb;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background: #e5e7eb;
+            color: #1f2937;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            background: #d1d5db;
+        }
+
+        h1 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #6b7280;
+            margin-top: 0;
+        }
+
+        .panel {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 16px;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr auto;
+            gap: 12px;
+            align-items: end;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background: white;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #3b82f6;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        th,
+        td {
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .filter-row td {
+            background: #f9fafb;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: 1fr 180px 120px 120px 150px 120px;
+            gap: 10px;
+            align-items: end;
+        }
+
+        .filter-grid .cell label {
+            margin-bottom: 4px;
+            font-size: 12px;
+            color: #4b5563;
+        }
+
+        .filter-grid .cell input,
+        .filter-grid .cell select {
+            padding: 8px 10px;
+            font-size: 13px;
+        }
+
+        .muted {
+            color: #9ca3af;
+            font-style: italic;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 1100px) {
+            .controls {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-link">← 返回首頁</a>
+    <h1>🔎 素材反查工具</h1>
+    <p>選擇素材後，查看哪些裝備需要此素材，以及需求數量。</p>
+
+    <div class="panel">
+        <div class="controls">
+            <div>
+                <label for="materialSearchInput">素材關鍵字</label>
+                <input id="materialSearchInput" type="text" placeholder="例如：木、鐵、哥布林..." />
+            </div>
+
+            <div>
+                <label for="materialSelect">素材名稱（含分類）</label>
+                <select id="materialSelect">
+                    <option value="">-- 請先選擇素材 --</option>
+                </select>
+            </div>
+
+            <div>
+                <button id="resetBtn">重設條件</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div id="summary" class="meta">載入中...</div>
+
+        <table>
+            <thead>
+                <tr class="filter-row">
+                    <td colspan="4">
+                        <div class="filter-grid">
+                            <div class="cell">
+                                <label for="equipmentNameFilter">裝備名稱篩選</label>
+                                <input id="equipmentNameFilter" type="text" placeholder="輸入裝備名稱關鍵字" />
+                            </div>
+
+                            <div class="cell">
+                                <label for="categoryFilter">裝備類別</label>
+                                <select id="categoryFilter">
+                                    <option value="">全部類別</option>
+                                </select>
+                            </div>
+
+                            <div class="cell">
+                                <label for="levelMinFilter">最低等級</label>
+                                <input id="levelMinFilter" type="number" min="0" placeholder="0" />
+                            </div>
+
+                            <div class="cell">
+                                <label for="levelMaxFilter">最高等級</label>
+                                <input id="levelMaxFilter" type="number" min="0" placeholder="999" />
+                            </div>
+
+                            <div class="cell">
+                                <label for="sortFieldSelect">排序欄位</label>
+                                <select id="sortFieldSelect">
+                                    <option value="level">等級</option>
+                                    <option value="amount">需求數量</option>
+                                    <option value="equipmentName">裝備名稱</option>
+                                    <option value="category">裝備類別</option>
+                                </select>
+                            </div>
+
+                            <div class="cell">
+                                <label for="sortOrderSelect">排序方向</label>
+                                <select id="sortOrderSelect">
+                                    <option value="asc">升冪</option>
+                                    <option value="desc">降冪</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>裝備名稱</th>
+                    <th>裝備類別</th>
+                    <th>等級</th>
+                    <th>需求數量</th>
+                </tr>
+            </thead>
+
+            <tbody id="resultBody">
+                <tr>
+                    <td colspan="4" class="muted">尚無資料</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const MATERIAL_GROUPS = [
+            {
+                group: "木頭素材",
+                materials: ["原木", "松木", "杉木", "紅木", "桃木", "紫檀木"]
+            },
+            {
+                group: "礦物素材",
+                materials: ["碎石", "鐵", "銀", "金", "紅寶石", "紫水晶"]
+            },
+            {
+                group: "草藥素材",
+                materials: ["綠色草藥", "黃色草藥", "紅色草藥", "希望之花"]
+            },
+            {
+                group: "稀有素材",
+                materials: ["盟約星羽", "幽窟碎片", "上古符文", "烈陽碎片", "冰晶雪花", "紫晶之心", "鳳凰之羽", "獨角獸角", "黑晶龍鱗", "兔兔抱枕", "汎汎的親筆簽名"]
+            },
+            {
+                group: "特殊/其他",
+                materials: ["防爆果凍", "重鑄魔方", "碎裂的命運石", "幻彩碎片", "職業變更之書", "祝福原鑽", "奇怪代幣", "如同命運般千變萬化之幻形符"]
+            },
+            {
+                group: "消耗/兌換",
+                materials: ["武器縮圖券", "至尊武器改名券", "自訂義稱號券7天", "自訂義稱號券30天"]
+            },
+            {
+                group: "探索冒險",
+                materials: ["動物皮毛", "動物骨頭", "動物脂肪", "幸運兔腳", "野狼牙齒", "殭屍之眼", "哥布林徽章", "狐狸尾巴", "古樹之花", "劇毒之心", "機器核心", "蟹螯", "空藥水瓶", "勞贖的料理", "蝙蝠皮膜", "聖靈之珠", "死亡氣息", "野狼皮革"]
+            },
+            {
+                group: "副本素材",
+                materials: ["破碎的哥布林面具", "完整的哥布林面具", "哥布林的信物", "獸人盾牌碎片", "獸人盾牌", "獸人的頭帶", "狼王毛髮", "狼王牙齒", "狼王的信念", "機械零件", "電子芯片", "奈米合金", "妖狐之尾", "靈魂狐爪", "幻視妖狐面具", "劇毒根鬚", "猛毒內核", "毒母之心", "藍色藥水", "生物混合塊", "混沌水晶體", "龍蝦觸鬚", "龍蝦厚殼", "龍蝦巨螯", "迴廊根源", "侵蝕之痕", "祝福之魂"]
+            }
+        ];
+
+        let equipmentData = [];
+        let materialMap = new Map();
+        let materialGroupMap = new Map();
+
+        const materialSearchInput = document.getElementById("materialSearchInput");
+        const materialSelect = document.getElementById("materialSelect");
+        const equipmentNameFilter = document.getElementById("equipmentNameFilter");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const levelMinFilter = document.getElementById("levelMinFilter");
+        const levelMaxFilter = document.getElementById("levelMaxFilter");
+        const sortFieldSelect = document.getElementById("sortFieldSelect");
+        const sortOrderSelect = document.getElementById("sortOrderSelect");
+        const resetBtn = document.getElementById("resetBtn");
+        const summary = document.getElementById("summary");
+        const resultBody = document.getElementById("resultBody");
+
+        function buildMaterialGroupMap() {
+            materialGroupMap.clear();
+            for (const groupEntry of MATERIAL_GROUPS) {
+                for (const material of groupEntry.materials) {
+                    materialGroupMap.set(material, groupEntry.group);
+                }
+            }
+        }
+
+        async function init() {
+            try {
+                const res = await fetch("complete_equipment.json");
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                equipmentData = await res.json();
+
+                buildMaterialGroupMap();
+                buildMaterialMap();
+                populateMaterialDropdown();
+                populateCategoryFilter();
+                renderEmptyState("請先選擇素材。");
+            } catch (error) {
+                summary.textContent = `載入 complete_equipment.json 失敗：${error.message}`;
+                renderEmptyState("無法載入資料。");
+            }
+        }
+
+        function buildMaterialMap() {
+            materialMap.clear();
+
+            for (const item of equipmentData) {
+                const resources = Array.isArray(item.resources) ? item.resources : [];
+                for (const resource of resources) {
+                    const materialName = resource?.name;
+                    const amount = Number(resource?.amount || 0);
+                    if (!materialName) continue;
+
+                    if (!materialMap.has(materialName)) {
+                        materialMap.set(materialName, []);
+                    }
+
+                    materialMap.get(materialName).push({
+                        equipmentName: item.name || "(未知裝備)",
+                        category: item.category || "(未知類別)",
+                        level: Number(item.level_required ?? 0),
+                        amount
+                    });
+                }
+            }
+        }
+
+        function getOrderedMaterialList() {
+            const inData = new Set(materialMap.keys());
+            const result = [];
+            const used = new Set();
+
+            for (const groupEntry of MATERIAL_GROUPS) {
+                for (const material of groupEntry.materials) {
+                    if (inData.has(material)) {
+                        result.push(material);
+                        used.add(material);
+                    }
+                }
+            }
+
+            const ungrouped = Array.from(inData).filter(name => !used.has(name));
+            ungrouped.sort((a, b) => a.localeCompare(b, "zh-Hant"));
+
+            return result.concat(ungrouped);
+        }
+
+        function getMaterialLabel(materialName) {
+            const groupName = materialGroupMap.get(materialName) || "未分類";
+            return `${groupName}｜${materialName}`;
+        }
+
+        function populateMaterialDropdown(filteredKeyword = "") {
+            const keyword = filteredKeyword.trim();
+            const previousValue = materialSelect.value;
+            const orderedMaterials = getOrderedMaterialList();
+
+            const filtered = keyword
+                ? orderedMaterials.filter(name => name.includes(keyword))
+                : orderedMaterials;
+
+            materialSelect.innerHTML = `<option value="">-- 請選擇素材 --</option>`;
+
+            for (const materialName of filtered) {
+                const option = document.createElement("option");
+                option.value = materialName;
+                option.textContent = getMaterialLabel(materialName);
+                materialSelect.appendChild(option);
+            }
+
+            if (filtered.includes(previousValue)) {
+                materialSelect.value = previousValue;
+            } else {
+                materialSelect.value = "";
+            }
+        }
+
+        function populateCategoryFilter() {
+            const categorySet = new Set();
+            for (const rows of materialMap.values()) {
+                for (const row of rows) {
+                    categorySet.add(row.category);
+                }
+            }
+
+            const categories = Array.from(categorySet).sort((a, b) => a.localeCompare(b, "zh-Hant"));
+            categoryFilter.innerHTML = `<option value="">全部類別</option>`;
+            for (const cat of categories) {
+                const opt = document.createElement("option");
+                opt.value = cat;
+                opt.textContent = cat;
+                categoryFilter.appendChild(opt);
+            }
+        }
+
+        function renderEmptyState(message) {
+            resultBody.innerHTML = `<tr><td colspan="4" class="muted">${message}</td></tr>`;
+            summary.textContent = `素材總數：${materialMap.size}`;
+        }
+
+        function applyEquipmentFilters(rows) {
+            const nameKeyword = equipmentNameFilter.value.trim();
+            const selectedCategory = categoryFilter.value;
+            const minLevel = levelMinFilter.value === "" ? null : Number(levelMinFilter.value);
+            const maxLevel = levelMaxFilter.value === "" ? null : Number(levelMaxFilter.value);
+
+            return rows.filter(row => {
+                if (nameKeyword && !row.equipmentName.includes(nameKeyword)) return false;
+                if (selectedCategory && row.category !== selectedCategory) return false;
+                if (minLevel !== null && row.level < minLevel) return false;
+                if (maxLevel !== null && row.level > maxLevel) return false;
+                return true;
+            });
+        }
+
+        function applySort(rows) {
+            const field = sortFieldSelect.value;
+            const order = sortOrderSelect.value;
+            const factor = order === "asc" ? 1 : -1;
+
+            const sorted = [...rows].sort((a, b) => {
+                let cmp = 0;
+
+                if (field === "equipmentName") {
+                    cmp = a.equipmentName.localeCompare(b.equipmentName, "zh-Hant");
+                } else if (field === "category") {
+                    cmp = a.category.localeCompare(b.category, "zh-Hant");
+                } else if (field === "level") {
+                    cmp = a.level - b.level;
+                } else if (field === "amount") {
+                    cmp = a.amount - b.amount;
+                }
+
+                if (cmp === 0) {
+                    cmp = a.equipmentName.localeCompare(b.equipmentName, "zh-Hant");
+                }
+
+                return cmp * factor;
+            });
+
+            return sorted;
+        }
+
+        function renderResults() {
+            const materialName = materialSelect.value;
+            if (!materialName) {
+                renderEmptyState("請先選擇素材。");
+                return;
+            }
+
+            const allRows = materialMap.get(materialName) || [];
+            const filteredRows = applyEquipmentFilters(allRows);
+            const sortedRows = applySort(filteredRows);
+
+            if (sortedRows.length === 0) {
+                resultBody.innerHTML = `<tr><td colspan="4" class="muted">符合條件的裝備為 0 筆。</td></tr>`;
+            } else {
+                resultBody.innerHTML = "";
+                for (const row of sortedRows) {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+            <td>${row.equipmentName}</td>
+            <td>${row.category}</td>
+            <td>${row.level}</td>
+            <td>${row.amount}</td>
+          `;
+                    resultBody.appendChild(tr);
+                }
+            }
+
+            const groupName = materialGroupMap.get(materialName) || "未分類";
+            summary.textContent =
+                `素材分類：${groupName}｜素材：${materialName}｜總裝備數：${allRows.length}｜篩選後：${sortedRows.length}`;
+        }
+
+        function resetAll() {
+            materialSearchInput.value = "";
+            materialSelect.value = "";
+            equipmentNameFilter.value = "";
+            categoryFilter.value = "";
+            levelMinFilter.value = "";
+            levelMaxFilter.value = "";
+            sortFieldSelect.value = "level";
+            sortOrderSelect.value = "asc";
+
+            populateMaterialDropdown("");
+            renderEmptyState("請先選擇素材。");
+        }
+
+        materialSearchInput.addEventListener("input", () => {
+            populateMaterialDropdown(materialSearchInput.value);
+            renderResults();
+        });
+
+        materialSelect.addEventListener("change", renderResults);
+        equipmentNameFilter.addEventListener("input", renderResults);
+        categoryFilter.addEventListener("change", renderResults);
+        levelMinFilter.addEventListener("input", renderResults);
+        levelMaxFilter.addEventListener("input", renderResults);
+        sortFieldSelect.addEventListener("change", renderResults);
+        sortOrderSelect.addEventListener("change", renderResults);
+        resetBtn.addEventListener("click", resetAll);
+
+        init();
+    </script>
+</body>
+
+</html>
